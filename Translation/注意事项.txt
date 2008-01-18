@@ -1,0 +1,5 @@
+从今天(2008/01/18)开始,做文件翻译工作.
+
+计划:
+
+1. O'reilly Java Servlet Programming的翻译工作,同时做其他有关Servlet和Jsp的翻译工作.
