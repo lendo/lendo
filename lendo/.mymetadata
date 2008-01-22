@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="lendo"
+  id="myeclipse.1200980398250"
+  context-root="/lendo"
+  j2ee-spec="5.0"
+  archive="lendo.war">
+  <attributes>
+    <attribute name="webrootdir" value="web" />
+  </attributes>
+</project-module>
+
