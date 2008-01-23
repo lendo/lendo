@@ -1,0 +1,2 @@
+1.这本书,俺在网上(2008/1/18)断断续续找了一天,在下班前2小时才找到.
+2.翻译是基于O'reilly Java Servlet Programming Second Edtion.
