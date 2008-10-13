@@ -1,0 +1,46 @@
+一. 在用equals的时候如果是a.equals(b)这种情形，如果为空，则会出现NullPointerException。
+
+    一般来说这种类型的比较分为两种情况：一个变量和一个常量进行比较，两个变量之间进行比较。
+    
+    一个变量和一个常量进行比较：这种情况下一般采用将常量放到前面来避免出现异常，如"".equals(str)。
+    
+三. 在Object类里面的equals是通过判断两个Object的引用地址是否相等来决定两个对象是否equals的。
+
+    在String类里面的equals也是先判断两个String的引用地址是否相等，如果引用地址相等，那么这两个引
+    
+    用肯定就指向的是同一个内存地址，那么值肯定也就相等了，则返回，如果判断第一步中的两个引用地址不相等
+    
+    再继续通过比较引用所指向的对象的值来进行判断。Object类的equals方法：
+    
+    public boolean equals(Object obj){
+        return (this == obj);
+    }
+    
+    所以一般的说法，"=="号判断引用是否相等是对的，"equals"判断的是值是否相等就不完全对了。特别的对
+    
+    原生类型Object来说。这两个操作就是一回事，而且自定义类的equals方法都是需要自己手动写的。如果不
+    
+    写，那么就是在使用父类的equals方法(通常都是Object类的equals方法，哈哈，就是在比较引用地址)。
+    
+    实际上我们经常用String类来进行这两种方法的比较时出现的一些感觉互相矛盾的结果。都是由于String内部
+    
+    对equals覆盖以后的特殊处理造成的。
+    
+四. 下面两段代码之间的区别我通过查看字节码，来分析他们之间的不同处理方式。
+    String a = "abc";
+    String b = new String("abc");   
+    参考http://dev.yesky.com/91/2309091.shtml
+    
+    String a = new String("a"); 
+    String b = new String("a").intern(); //实际上是做String b = "a";的操作。
+
+    你比较的是String a = new String("a")和String b = "a"两个引用内存地址是否一样。
+    
+    是否可以这么理解，不管String a = "a"还是String a = new String("a")，第一步都是在常量表里面建立
+    
+    "a"，也就是String a = "a"，通过new String("a")只不过多了一步，就是以常量表里面的a为模型，创建
+    
+    一个新的对象于堆上。所以调用intern的时候，返回的实际上是常量表中的那个定义好的常量。
+    
+五. String类的intern()方法。
+  
