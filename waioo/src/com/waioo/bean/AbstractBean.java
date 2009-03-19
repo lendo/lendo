@@ -9,6 +9,7 @@ public class AbstractBean {
 	protected AbstractBean(){
 		changeSupport = new PropertyChangeSupport(this);
 	    PropertyChangeListener listener = new WaiooPropertyChangeListener();
+	    
 	    this.addPropertyChangeListener(listener);
 	}
 	
@@ -23,5 +24,6 @@ public class AbstractBean {
 	private void removePropertyChangeListener(PropertyChangeListener l) {
         changeSupport.removePropertyChangeListener(l);
     }
+
 	
 }

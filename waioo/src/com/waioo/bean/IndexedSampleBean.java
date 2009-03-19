@@ -1,8 +1,9 @@
 package com.waioo.bean;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.waioo.util.Date;
 
 public class IndexedSampleBean extends AbstractBean {
 	

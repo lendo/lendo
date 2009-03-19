@@ -1,6 +1,6 @@
 package com.waioo.bean;
 
-import java.util.Date;
+import com.waioo.util.Date;
 
 public class DateBean extends AbstractBean {
     private String name = null;
