@@ -1,4 +1,4 @@
-package com.waioo.classloader.loadorder;
+package com.waioo.classloader;
 
 public class B {
     public void print(){
