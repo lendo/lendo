@@ -1,4 +1,4 @@
-package com.waioo.classloader.loadorder;
+package com.waioo.classloader;
 
 /**
  * 此类主要是为了验证ClassLoader加载类的顺序
@@ -18,5 +18,7 @@ public class Main {
 //		b.print();
 		
         B b = null; //如果将上面两段代码删除，执行此段代码，注意类B是否会被加载
+        
+        a.print();
 	}
 }
