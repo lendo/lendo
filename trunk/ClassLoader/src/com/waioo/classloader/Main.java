@@ -19,6 +19,9 @@ public class Main {
 		
         B b = null; //如果将上面两段代码删除，执行此段代码，注意类B是否会被加载
         
-        a.print();
+        Printable a2 = (Printable)MicroContainer.getInstance().getObject("com.waioo.classloader.A");
+        a2.print();
+        Printable b2 = (Printable)MicroContainer.getInstance().getObject("com.waioo.classloader.B");
+        b2.print();
 	}
 }
