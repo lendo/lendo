@@ -1,6 +1,4 @@
-#summary One-sentence summary of this page.
 #labels Featured
-
 = Introduction =
 
 Give best regards for my parents,my girl and my friends.
@@ -19,5 +17,3 @@ whereas that's so difficult.
 so walking only along this way step by step.
 
 I am sure the essence of life is walking endlessly.
-
-
