@@ -1,3 +1,8 @@
 1. 在执行一个类的的方法的时候，执行到一个类就会加载相关的类和被执行的类，而对于与被执行类不相关的类，则不会被加载。
    如果被执行类里面只是简单地声明另一个相关类的引用(Class clazz = null)，而没有对相关类进行初始化，那么这个相关的类不会被加载。
    具体例子见：com.waioo.classloader.loadorder.Main	
+   
+2. 放在一个类的static{}里面的代码即静态初始化代码是在:"类第一次被实例化的时候才被调用，而且仅仅调用一次"，因为我们可以用Class.forName来加载一个类，当
+   Class clazz = Class.forName(className,false,ClassLoader)这样调用的时候，静态初始化代码是不会被加载的。但是只要clazz.newInstance()
+   静态代码块就被调用了，而且是只调用一次。
+   当使用隐式的代码的时候：如A a = new A()，那默认会初始化static{}内部的代码。
