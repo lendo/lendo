@@ -10,18 +10,21 @@ package com.waioo.classloader;
  * @author Dan Du
  */
 public class Main {
-	public static void main(String[] args) {
-		A a = new A();
-		a.print();
+	public static void main(String[] args) throws Exception {
+//		A a = new A();
+//		a.print();
 		
 //		B b = new B();
 //		b.print();
 		
         B b = null; //如果将上面两段代码删除，执行此段代码，注意类B是否会被加载
         
-        Printable a2 = (Printable)MicroContainer.getInstance().getObject("com.waioo.classloader.A");
-        a2.print();
-        Printable b2 = (Printable)MicroContainer.getInstance().getObject("com.waioo.classloader.B");
-        b2.print();
+        /**
+         * 注意这两段代码的区别，静态初始化代码是在:"类第一次被实例化的时候才被调用，而且仅仅调用一次"
+         * 而不是"在类第一次被加载的时候被调用"
+         */
+        Class clazz1 = Class.forName("com.waioo.classloader.A",false,ClassLoader.getSystemClassLoader());
+//      Class clazz2 = Class.forName("com.waioo.classloader.A",true,ClassLoader.getSystemClassLoader());
+//      Printable p = (Printable)clazz.newInstance();
 	}
 }
