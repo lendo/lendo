@@ -1,0 +1,107 @@
+On the field selector screen.
+
+Change Composited Column to Composite Column
+Add a note to let people know they can drag and drop fields in addition to their buttons in the middle.
+
+You can drag and drop a column from the section of the available fields on the left to the "Selected" area on the right. You can also drag and drop a column within the "Selected" area to adjust display sequence.
+
+
+On the search criteria screem:
+
+remove the categorized section on the left.
+
+Mailing Report:
+
+move City before State
+move Street1 before City
+Add zip
+Remove Company Email and User Email1
+change user name (F) to prefix, first name, middle name, last night, suffix, salutation
+
+
+
+Email Open:
+
+Can we remove (For Tracking)
+
+Remove retry count
+
+Add a link to email campaign, account
+
+
+
+Email Click-through
+add email field, user email
+Add a link to email campaign, account
+remove email retry count
+
+
+Email Bounce:
+add email field, user email
+Add a link to email campaign, account
+remove email recipient email server, email action, final receipt.
+
+Email opt-out
+just leave email field there
+add user name and account id
+add opt-out date
+
+
+Invalid Email:
+use the following:
+account id, user name, email, error code, time when error detected
+
+Email By relationship
+remove email2 and email3 since we can't really use them
+
+
+
+
+Detailed Donation:
+add transaction ID
+add address information, including street1, city, state, zip
+
+
+
+Donation:
+replace HM ID with HM Full Name
+
+
+Declined Donation:
+Add Tender
+
+H/M donations
+remove user Gender, add street1, zip
+
+
+Honor/Memory Donation Acknowledgement Report 
+the address output field should be Acknowledgee's information
+
+
+Match Donation
+Add donation date
+
+
+Pledge and Payment:
+Add amount, donation date to "Plege Amount", "Pledge Date"
+
+
+Recurring Donation Report 
+add totalPaidAmount
+add userName
+
+
+
+Declined Recurring DOnation
+Add credit card expiration date
+add userName
+
+
+Cancelled Recurring Donation Report
+Add credit card expiration date
+add userName
+
+
+
+
+
