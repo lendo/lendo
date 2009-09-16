@@ -4,3 +4,13 @@
 4.修改数据库结构，将report_output_lookup表的groupType字段进行初始化，原来的可选列的排序混乱是因为JS里面的一个Sort Info造成的。
 5.按照张总的reporting-columns.txt的格式修改目前的报表输出。
 6.原来的OneClickReport，我改了部分代码，但是也导致管理员无法进入Select Columns界面，所以在Session里面加了一个标志位来判断。
+
+
+
+
+
+
+schedule:
+1.Check Email:
+  Can we also ticket packages into the event/session registrant/attendee reports? 
+  I do hear this kind of requests here and there.
