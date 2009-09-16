@@ -1,0 +1,5 @@
+1.在每个stats表中加入了第一次和最后一次Action的时间，同时将其加入报表系统。
+2.去掉Report Home界面的Query Filter部分。
+3.将Report Home界面的Daily Report的PDF图片换为daily.gif，同时将导出PDF改为导出HTML。
+4.修改数据库结构，将report_output_lookup表的groupType字段进行初始化，原来的可选列的排序混乱是因为JS里面的一个Sort Info造成的。
+5.按照张总的reporting-columns.txt的格式修改目前的报表输出。
