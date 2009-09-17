@@ -5,6 +5,6 @@ public class A implements Printable {
 		System.out.println("Inlitianize the static code......");
 	}
     public void print(){
-    	System.out.println("----------------from A.");
+    	System.out.println("----------------from A."); 
     }
 }
