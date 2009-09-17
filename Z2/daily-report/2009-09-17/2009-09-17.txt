@@ -1,1 +1,8 @@
-1.继续修改reporting-columns.txt里面的内容
+1.继续修改reporting-columns.txt里面的内容。
+
+
+schedule:
+1.Check Email:
+  Can we also ticket packages into the event/session registrant/attendee reports? 
+  I do hear this kind of requests here and there.
+2.如果group by attribute(graphic code)，就应该将这个attribute输出，所以需要加一个字段，专门用来输出这个group name。
