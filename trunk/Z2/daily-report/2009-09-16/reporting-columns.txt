@@ -1,15 +1,20 @@
 On the field selector screen.
 
+---------------------------Done-----------------------------
 Change Composited Column to Composite Column
 Add a note to let people know they can drag and drop fields in addition to their buttons in the middle.
 
 You can drag and drop a column from the section of the available fields on the left to the "Selected" area on the right. You can also drag and drop a column within the "Selected" area to adjust display sequence.
+------------------------------------------------------------
 
 
+---------------------------Done-----------------------------
 On the search criteria screem:
 
 remove the categorized section on the left.
+------------------------------------------------------------
 
+---------------------------Done-----------------------------
 Mailing Report:
 
 move City before State
@@ -17,9 +22,10 @@ move Street1 before City
 Add zip
 Remove Company Email and User Email1
 change user name (F) to prefix, first name, middle name, last night, suffix, salutation
+------------------------------------------------------------
 
 
-
+---------------------------Done-----------------------------
 Email Open:
 
 Can we remove (For Tracking)
@@ -27,19 +33,25 @@ Can we remove (For Tracking)
 Remove retry count
 
 Add a link to email campaign, account
+------------------------------------------------------------
 
 
-
+---------------------------Done-----------------------------
 Email Click-through
 add email field, user email
 Add a link to email campaign, account
 remove email retry count
+------------------------------------------------------------
 
 
+---------------------------Done-----------------------------
 Email Bounce:
 add email field, user email
 Add a link to email campaign, account
 remove email recipient email server, email action, final receipt.
+------------------------------------------------------------
+
+
 
 Email opt-out
 just leave email field there
@@ -100,6 +112,114 @@ add userName
 Cancelled Recurring Donation Report
 Add credit card expiration date
 add userName
+
+
+Soft credit report
+Add link to Match donation Id
+
+
+
+Donation Summary by Attribute
+***Important: Missing the options of the custom field
+Unpaid Pledge Amount is not correctly formatted
+
+
+
+Participation report
+***Important: Missing the options of the categorized field
+(i.e. when i categorized by state, I should see each state as the first column on the report)
+
+
+Donor report
+Remove User Gender
+Remove user Prefix
+Remove Country
+Move zip after state
+
+Donor list by demographic code
+***Important: Missing the options of the categorized field
+(i.e. when i categorized by state, I should see each state as the first column on the report)
+remove county and country
+
+
+Donor List by Attribute
+***Important: Missing the options of the categorized field
+(i.e. when i categorized by state, I should see each state as the first column on the report)
+Remove User Gender
+Remove user Prefix
+Remove Country
+
+
+LYBUNTS donoreport:
+remove 2009 amount and count, as it's always zero
+add last year today and last year count
+why first donation date and last donation date is blank?
+
+SYBUNTS donoreport:
+remove 2009 amount and count, as it's always zero
+why first donation date and last donation date is blank?
+
+
+campaign report:
+make the campaign Id and name to the first two columns.
+
+Event summary report:
+We need to add total registration fee and total attendees.
+
+event registration report:
+can we also include ticket price infor?
+
+event attendee report:
+can we also include ticket price information?
+missed registration Id and its link
+
+
+session registraion report:
+can we also include ticket price infor?
+
+event session attendee report:
+can we also include ticket price information?
+missed session name column.
+
+Name badge report
+remove basic and attribute tabs
+user gender, county, country and email
+move city in front of state
+
+
+SYBUNTS/LYBUNTS event report:
+remove 2009 amount and count, as it's always zero
+for LyBUNTS: add last year today and last year count
+
+
+
+
+
+
+Top buyer report:
+Output shouldn't contain shopping cart
+Total charge should be a total on everything purchase, same thing for total shipping/handling cost.
+
+SYBUNTS/LYBUNTS store customer report:
+remove 2009 amount and count, as it's always zero
+for LyBUNTS: add last year today and last year count
+
+
+Acitivty report and Due activity report
+add client name
+move the client ID and client Name as the first two columns.
+
+
+
+
+
+
+
+Stats Report
+We'll need to be able to include those stats fields you recently added.
+Remove County, move street1 before city
+If possible, i hope we can change User type from Constituent to Individual, from Company to Organization. This is a general rule, not just applied to this particular report.
+
 
 
 
