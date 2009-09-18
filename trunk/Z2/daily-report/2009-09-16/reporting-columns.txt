@@ -161,11 +161,12 @@ Move zip after state
 ------------------------------------------------------------
 
 
-
+---------------------------Done-----------------------------
 Donor list by demographic code
 ***Important: Missing the options of the categorized field
 (i.e. when i categorized by state, I should see each state as the first column on the report)
 remove county and country
+------------------------------------------------------------
 
 
 ---------------------------Done-----------------------------
