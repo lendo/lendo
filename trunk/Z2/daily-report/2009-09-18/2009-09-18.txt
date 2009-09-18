@@ -1,0 +1,10 @@
+1.继续修改reporting-columns.txt里面的内容。
+2.Make name and address all uppercase when people click on Excel/CSV export from the mailing report。
+3.差张总10块钱。
+4.如果group by attribute(graphic code)，就应该将这个attribute输出。修改见：ReportFilterAction的groupAdd部分。
+
+
+schedule:
+1.Check Email:
+  Can we also ticket packages into the event/session registrant/attendee reports? 
+  I do hear this kind of requests here and there.
