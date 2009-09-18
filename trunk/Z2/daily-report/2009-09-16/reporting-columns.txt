@@ -221,6 +221,9 @@ Remove County, move street1 before city
 If possible, i hope we can change User type from Constituent to Individual, from Company to Organization. This is a general rule, not just applied to this particular report.
 
 
+Pledge Report
+导出所有的Expected Date。
+
 
 
 
