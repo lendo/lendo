@@ -52,89 +52,115 @@ remove email recipient email server, email action, final receipt.
 ------------------------------------------------------------
 
 
-
+---------------------------Done-----------------------------
 Email opt-out
 just leave email field there
 add user name and account id
 add opt-out date
+------------------------------------------------------------
 
-
+---------------------------Done-----------------------------
 Invalid Email:
 use the following:
 account id, user name, email, error code, time when error detected
+------------------------------------------------------------
 
+
+---------------------------Done-----------------------------
 Email By relationship
 remove email2 and email3 since we can't really use them
+------------------------------------------------------------
 
 
-
-
+---------------------------Done-----------------------------
 Detailed Donation:
 add transaction ID
 add address information, including street1, city, state, zip
+------------------------------------------------------------
 
 
-
+---------------------------Done-----------------------------
 Donation:
 replace HM ID with HM Full Name
+------------------------------------------------------------
 
 
+---------------------------Done-----------------------------
 Declined Donation:
 Add Tender
+------------------------------------------------------------
 
+
+---------------------------Done-----------------------------
 H/M donations
 remove user Gender, add street1, zip
+------------------------------------------------------------
 
 
-Honor/Memory Donation Acknowledgement Report 
-the address output field should be Acknowledgee's information
-
-
+---------------------------Done-----------------------------
 Match Donation
 Add donation date
+------------------------------------------------------------
 
 
+---------------------------Done-----------------------------
 Pledge and Payment:
 Add amount, donation date to "Plege Amount", "Pledge Date"
+Pledge Report
+导出所有的Expected Date。
+------------------------------------------------------------
 
 
+---------------------------Done-----------------------------
 Recurring Donation Report 
 add totalPaidAmount
 add userName
+------------------------------------------------------------
 
 
-
+---------------------------Done-----------------------------
 Declined Recurring DOnation
 Add credit card expiration date
 add userName
+------------------------------------------------------------
 
 
+---------------------------Done-----------------------------
 Cancelled Recurring Donation Report
 Add credit card expiration date
 add userName
+------------------------------------------------------------
 
 
+---------------------------Done-----------------------------
 Soft credit report
 Add link to Match donation Id
+------------------------------------------------------------
 
 
-
+---------------------------Done-----------------------------
 Donation Summary by Attribute
 ***Important: Missing the options of the custom field
 Unpaid Pledge Amount is not correctly formatted
+------------------------------------------------------------
 
 
-
+---------------------------Done-----------------------------
 Participation report
 ***Important: Missing the options of the categorized field
 (i.e. when i categorized by state, I should see each state as the first column on the report)
+------------------------------------------------------------
 
 
+---------------------------Done-----------------------------
 Donor report
 Remove User Gender
 Remove user Prefix
 Remove Country
 Move zip after state
+------------------------------------------------------------
+
+
 
 Donor list by demographic code
 ***Important: Missing the options of the categorized field
@@ -142,12 +168,14 @@ Donor list by demographic code
 remove county and country
 
 
+---------------------------Done-----------------------------
 Donor List by Attribute
 ***Important: Missing the options of the categorized field
 (i.e. when i categorized by state, I should see each state as the first column on the report)
 Remove User Gender
 Remove user Prefix
 Remove Country
+------------------------------------------------------------
 
 
 LYBUNTS donoreport:
@@ -221,9 +249,9 @@ Remove County, move street1 before city
 If possible, i hope we can change User type from Constituent to Individual, from Company to Organization. This is a general rule, not just applied to this particular report.
 
 
-Pledge Report
-导出所有的Expected Date。
 
+Honor/Memory Donation Acknowledgement Report 
+the address output field should be Acknowledgee's information
 
 
 
