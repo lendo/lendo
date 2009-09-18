@@ -2,6 +2,7 @@
 2.Make name and address all uppercase when people click on Excel/CSV export from the mailing report。
 3.差张总10块钱(已还)。
 4.如果group by attribute(graphic code)，就应该将这个attribute输出。修改见：ReportFilterAction的groupAdd部分。
+  注意，这里这个方法，V2ReportUtils.getRegularColumnIdFromText（）这是将主键硬编码到代码中，所以SQL脚本里面的主键一定不能变化。
 
 
 schedule:
