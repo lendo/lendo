@@ -1,0 +1,12 @@
+1.今天加班，继续reporting-columns.txt里面的内容。
+
+
+
+
+schedule:
+1.Check Email:
+  Can we also ticket packages into the event/session registrant/attendee reports? 
+  I do hear this kind of requests here and there.
+2.这个修改还有些问题：
+  原来的OneClickReport，我改了部分代码，但是也导致管理员无法进入Select Columns界面，所以在Session里面加了一个标志位来判断。
+3.检查所有select columns，或许会有错。
