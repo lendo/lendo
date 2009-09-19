@@ -1,12 +1,13 @@
-1.今天加班，继续reporting-columns.txt里面的内容。
+1.今天是周六，加班，继续/2009-09-16/reporting-columns.txt里面的内容。
+2.修改/2009-09-18/problem.txt里面的内容
 
 
 
 
 schedule:
-1.Check Email:
-  Can we also ticket packages into the event/session registrant/attendee reports? 
-  I do hear this kind of requests here and there.
-2.这个修改还有些问题：
+1.这个修改还有些问题：
   原来的OneClickReport，我改了部分代码，但是也导致管理员无法进入Select Columns界面，所以在Session里面加了一个标志位来判断。
-3.检查所有select columns，或许会有错。
+2.检查所有select columns，或许会有错。
+3.保存column的地方或许会有小bug,有时候保存不了。
+3.看JIRA上的BUG。
+4.导出数据脚本。
