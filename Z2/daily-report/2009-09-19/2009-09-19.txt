@@ -11,4 +11,5 @@ schedule:
 2.检查所有select columns，或许会有错。
 3.保存column的地方或许会有小bug,有时候保存不了。
 3.看JIRA上的BUG。
+4.修改/2009-09-18/problem.txt里面的内容
 4.导出数据脚本。
