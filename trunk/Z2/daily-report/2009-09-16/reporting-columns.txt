@@ -179,22 +179,69 @@ Remove Country
 ------------------------------------------------------------
 
 
+---------------------------Done-----------------------------
 LYBUNTS donoreport:
 remove 2009 amount and count, as it's always zero
 add last year today and last year count
 why first donation date and last donation date is blank?
+------------------------------------------------------------
 
+
+---------------------------Done-----------------------------
 SYBUNTS donoreport:
 remove 2009 amount and count, as it's always zero
 why first donation date and last donation date is blank?
+------------------------------------------------------------
 
 
+---------------------------Done-----------------------------
 campaign report:
 make the campaign Id and name to the first two columns.
+------------------------------------------------------------
 
+
+
+---------------------------Done-----------------------------
 Event summary report:
 We need to add total registration fee and total attendees.
+------------------------------------------------------------
 
+
+---------------------------Done-----------------------------
+Name badge report
+remove basic and attribute tabs
+user gender, county, country and email
+move city in front of state
+------------------------------------------------------------
+
+
+---------------------------Done-----------------------------
+SYBUNTS/LYBUNTS event report:
+remove 2009 amount and count, as it's always zero
+for LyBUNTS: add last year today and last year count
+------------------------------------------------------------
+
+
+---------------------------Done-----------------------------
+SYBUNTS/LYBUNTS store customer report:
+remove 2009 amount and count, as it's always zero
+for LyBUNTS: add last year today and last year count
+------------------------------------------------------------
+
+
+---------------------------Done-----------------------------
+Honor/Memory Donation Acknowledgement Report 
+the address output field should be Acknowledgee's information
+------------------------------------------------------------
+
+---------------------------Done-----------------------------
+Top buyer report:
+Output shouldn't contain shopping cart
+Total charge should be a total on everything purchase, same thing for total shipping/handling cost.
+------------------------------------------------------------
+
+
+---------------------------Done-----------------------------
 event registration report:
 can we also include ticket price infor?
 
@@ -202,58 +249,30 @@ event attendee report:
 can we also include ticket price information?
 missed registration Id and its link
 
-
 session registraion report:
 can we also include ticket price infor?
 
 event session attendee report:
 can we also include ticket price information?
 missed session name column.
-
-Name badge report
-remove basic and attribute tabs
-user gender, county, country and email
-move city in front of state
+------------------------------------------------------------
 
 
-SYBUNTS/LYBUNTS event report:
-remove 2009 amount and count, as it's always zero
-for LyBUNTS: add last year today and last year count
-
-
-
-
-
-
-Top buyer report:
-Output shouldn't contain shopping cart
-Total charge should be a total on everything purchase, same thing for total shipping/handling cost.
-
-SYBUNTS/LYBUNTS store customer report:
-remove 2009 amount and count, as it's always zero
-for LyBUNTS: add last year today and last year count
-
-
+---------------------------Done-----------------------------
 Acitivty report and Due activity report
 add client name
 move the client ID and client Name as the first two columns.
+------------------------------------------------------------
 
 
-
-
-
-
-
+---------------------------Done-----------------------------
 Stats Report
 We'll need to be able to include those stats fields you recently added.
 Remove County, move street1 before city
+------------------------------------------------------------
+
+
+---------------------------Done-----------------------------
 If possible, i hope we can change User type from Constituent to Individual, from Company to Organization. This is a general rule, not just applied to this particular report.
-
-
-
-Honor/Memory Donation Acknowledgement Report 
-the address output field should be Acknowledgee's information
-
-
-
+------------------------------------------------------------
 
