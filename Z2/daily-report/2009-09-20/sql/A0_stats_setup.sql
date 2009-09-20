@@ -47,9 +47,7 @@ CREATE TABLE `donation_stats` (
   `p_amount_total` double(12,2) default NULL,
   `count_total` double(12,2) default NULL,
   `p_count_total` double(12,2) default NULL,
-  PRIMARY KEY  (`id`),
-  KEY `donation_status_ibfk_1` (`userId`),
-  CONSTRAINT `donation_status_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 
@@ -81,9 +79,7 @@ CREATE TABLE `event_registration_stats` (
   `count_this_4` double(15,2) default NULL,
   `f_amount_this_4` double(15,2) default NULL,
   `f_count_this_4` double(15,2) default NULL,
-  PRIMARY KEY  (`id`),
-  KEY `event_registration_status_ibfk_1` (`userId`),
-  CONSTRAINT `event_registration_status_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 
@@ -115,9 +111,7 @@ CREATE TABLE `membership_stats` (
   `count_this_4` double(15,2) default NULL,
   `f_amount_this_4` double(15,2) default NULL,
   `f_count_this_4` double(15,2) default NULL,
-  PRIMARY KEY  (`id`),
-  KEY `membership_status_ibfk_1` (`accountId`),
-  CONSTRAINT `membership_status_ibfk_1` FOREIGN KEY (`accountId`) REFERENCES `account` (`id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 
@@ -149,7 +143,5 @@ CREATE TABLE `shopping_cart_stats` (
   `count_this_4` double(15,2) default NULL,
   `f_amount_this_4` double(15,2) default NULL,
   `f_count_this_4` double(15,2) default NULL,
-  PRIMARY KEY  (`id`),
-  KEY `order_status_ibfk_1` (`userId`),
-  CONSTRAINT `order_status_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
