@@ -1,11 +1,19 @@
 -- ----------------------------
--- TODO:Update report_config table,add isOneClickReport column.
+-- Update report_config table,add isOneClickReport column.
+-- ----------------------------
+UPDATE `table_relation` SET `foreignKey`='reportId',`applyOrder`='9' WHERE (`parentTable`='report_config') AND (`childTable`='report_output') AND (`parentDeleteAction`='cascade') AND (ISNULL(`childDeleteAction`)) AND (ISNULL(`foreignKey`)) AND (`applyOrder`='0') AND (ISNULL(`singleBlockMessage`)) AND (ISNULL(`groupBlockMessage`)) AND (`pdboNullify`='0') AND (`pdboCascade`='0') AND (`pdboSubstitute`='0') AND (ISNULL(`pdboSubstituteMap`)) AND (`pdboIndividualDecision`='0') AND (ISNULL(`pdboNullifyMessage`)) AND (ISNULL(`pdboCascadeMessage`)) AND (ISNULL(`pdboSubstituteMessage`)) LIMIT 1;
+
+alter table report_config add column isOneClickReport tinyint(4) not null;
+
+UPDATE `tab` SET `url`='/admin/v2report/category.do' WHERE (`id`='171');
+UPDATE `tab` SET `url`='/admin/v2report/saved.do' WHERE (`id`='174');
+INSERT INTO `tab` VALUES ('403', null, '7', 'One-Click Report', '0', '/admin/v2report/oneclick.do', '0');
+INSERT INTO `tab` VALUES ('404', null, '7', 'Stats Report', '9', '/admin/v2report/stats.do', '0');
+
+-- ----------------------------
+-- Add New Report Config Records 
 -- ----------------------------
 
-
--- ----------------------------
--- TODO:Add New Report Config Records 
--- ----------------------------
 
 
 -- ----------------------------
