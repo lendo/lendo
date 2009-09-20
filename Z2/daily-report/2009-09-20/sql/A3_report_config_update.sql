@@ -8,7 +8,7 @@ alter table report_config add column isOneClickReport tinyint(4) not null defaul
 UPDATE `tab` SET `url`='/admin/v2report/category.do' WHERE (`id`='171');
 UPDATE `tab` SET `url`='/admin/v2report/saved.do' WHERE (`id`='174');
 INSERT INTO `tab` VALUES ('403', null, '7', 'One-Click Report', '0', '/admin/v2report/oneclick.do', '0');
-INSERT INTO `tab` VALUES ('404', null, '7', 'Stats Report', '9', '/admin/v2report/stats.do', '0');
+INSERT INTO `tab` VALUES ('404', null, '7', 'Stats Report', '9', '/admin/v2report/validFieldsList.do?reportId=200', '0');
 
 -- ----------------------------
 -- Add New Report Config Records 
