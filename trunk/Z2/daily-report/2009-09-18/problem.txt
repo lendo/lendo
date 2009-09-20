@@ -6,5 +6,7 @@ Under One-click report, move current year and this month store total to the Stor
 
 stats report, can we make those yearly stats the available fields too?
 
+---------------------------done---------------------------
 The search selection on Store and Event Discount still doesn't work?
+----------------------------------------------------------
 
