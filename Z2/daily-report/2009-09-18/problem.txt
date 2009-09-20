@@ -1,10 +1,16 @@
+---------------------------done---------------------------
 Offline donation should exclude pledge and matchpledge
+----------------------------------------------------------
 
+---------------------------done---------------------------
 Match pledge due should only pull out those "open" mtach pledges
+----------------------------------------------------------
 
 Under One-click report, move current year and this month store total to the Store section
 
+---------------------------done---------------------------
 stats report, can we make those yearly stats the available fields too?
+----------------------------------------------------------
 
 ---------------------------done---------------------------
 The search selection on Store and Event Discount still doesn't work?
