@@ -3,7 +3,7 @@
 -- ----------------------------
 UPDATE `table_relation` SET `foreignKey`='reportId',`applyOrder`='9' WHERE (`parentTable`='report_config') AND (`childTable`='report_output') AND (`parentDeleteAction`='cascade') AND (ISNULL(`childDeleteAction`)) AND (ISNULL(`foreignKey`)) AND (`applyOrder`='0') AND (ISNULL(`singleBlockMessage`)) AND (ISNULL(`groupBlockMessage`)) AND (`pdboNullify`='0') AND (`pdboCascade`='0') AND (`pdboSubstitute`='0') AND (ISNULL(`pdboSubstituteMap`)) AND (`pdboIndividualDecision`='0') AND (ISNULL(`pdboNullifyMessage`)) AND (ISNULL(`pdboCascadeMessage`)) AND (ISNULL(`pdboSubstituteMessage`)) LIMIT 1;
 
-alter table report_config add column isOneClickReport tinyint(4) not null;
+alter table report_config add column isOneClickReport tinyint(4) not null default 0;
 
 UPDATE `tab` SET `url`='/admin/v2report/category.do' WHERE (`id`='171');
 UPDATE `tab` SET `url`='/admin/v2report/saved.do' WHERE (`id`='174');
