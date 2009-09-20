@@ -697,9 +697,9 @@ drop table if exists temp;
 create temporary table temp
 select report_output_system.id as id,report_config.id as configId,report_output_system.lookUpId as lookUpId,report_output_system.lookUpIdType as lookUpIdType from report_output_system 
 left join report_config on report_config.report=report_output_system.reportId
-where report_config.defaultConfig=1 and  report_config.report<57;
+where report_config.defaultConfig=1 and report_config.report<57;
 
-delete from report_output_system;
+delete from report_output_system where reportId<57;
 insert into report_output_system select id,configId,lookUpId,lookUpIdType from temp;
 
 

@@ -136,6 +136,7 @@ INSERT INTO `search_token` VALUES (null, 'statsType', '1', 'GRPBY', '100015', '0
 INSERT INTO `search_token` VALUES (null, 'includeOtherEmails', '0', 'GRPBY', '100015', '0', null, null, null, null);
 INSERT INTO `search_token` VALUES (null, 'forEmail', '0', 'GRPBY', '100015', '0', null, null, null, null);
 INSERT INTO `search_token` VALUES (null, 'donation.tenderId', '( \'\'4\'\', \'\'12\'\')', '10', '100015', '0', '1', 'Tender', '( \'\'Credit Card (Online)\'\', \'\'E-Check/ACH\'\')', '7');
+INSERT INTO `search_token` VALUES (null, 'donation.donationType', '( \'\'1\'\', \'\'3\'\')', '9', '100015', '0', '1', 'Donation Type', '( \'\'DONATION\'\', \'\'PLEDGEPAYMENT\'\')', '7');
 INSERT INTO `search_token` VALUES (null, 'statsType', '1', 'GRPBY', '100025', '0', null, null, null, null);
 INSERT INTO `search_token` VALUES (null, 'includeOtherEmails', '0', 'GRPBY', '100025', '0', null, null, null, null);
 INSERT INTO `search_token` VALUES (null, 'forEmail', '0', 'GRPBY', '100025', '0', null, null, null, null);
