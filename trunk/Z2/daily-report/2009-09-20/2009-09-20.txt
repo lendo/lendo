@@ -1,0 +1,21 @@
+1.做了/sql文件夹里面的初始化数据，还不完整。
+
+
+
+
+
+
+
+
+
+
+
+
+schedule:
+1.这个修改还有些问题：
+  原来的OneClickReport，我改了部分代码，但是也导致管理员无法进入Select Columns界面，所以在Session里面加了一个标志位来判断。
+2.检查所有select columns，或许会有错。
+3.保存column的地方或许会有小bug,有时候保存不了。
+3.看JIRA上的BUG。
+4.修改/2009-09-18/problem.txt里面的内容
+4.导出数据脚本。
