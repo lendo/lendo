@@ -1,5 +1,15 @@
 1.做了/sql文件夹里面的初始化数据，还不完整。
+
 2.快速执行脚本命令：mysql -u root -p#### dbName < c:\path\aaa.sql
+
+3.在利用任何一个客户数据库进行测试的时候，都要注意将客户的邮件和gateway设置更改一下，以免造成误操作。
+  a,删除system_setting里面的第一行(Mail Server)，修改fake....这字段的值为1。
+  b,修改organization_bio，将两个email改为:info@z2systems.com，同时修改orgCode=test。
+  c,将gateway里面用户的帐户的用户名和密码删除，修改testMode=1,trailMode=1。
+  
+4.今天在导出数据结构的时候，差点遇到一个大麻烦，我用变化的主键作为了关联对象，
+  那么上线的时候，这个主键是不定的，还好在report_config中有一个固定report字段，
+  否则会搞出大麻烦，以后再开始建立数据结构的时候，一定要小心这些问题。
 
 
 
