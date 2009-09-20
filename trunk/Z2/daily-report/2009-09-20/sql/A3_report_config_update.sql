@@ -1,7 +1,7 @@
 -- ----------------------------
 -- Update report_config table,add isOneClickReport column.
 -- ----------------------------
-UPDATE `table_relation` SET `foreignKey`='reportId',`applyOrder`='9' WHERE (`parentTable`='report_config') AND (`childTable`='report_output') AND (`parentDeleteAction`='cascade') AND (ISNULL(`childDeleteAction`)) AND (ISNULL(`foreignKey`)) AND (`applyOrder`='0') AND (ISNULL(`singleBlockMessage`)) AND (ISNULL(`groupBlockMessage`)) AND (`pdboNullify`='0') AND (`pdboCascade`='0') AND (`pdboSubstitute`='0') AND (ISNULL(`pdboSubstituteMap`)) AND (`pdboIndividualDecision`='0') AND (ISNULL(`pdboNullifyMessage`)) AND (ISNULL(`pdboCascadeMessage`)) AND (ISNULL(`pdboSubstituteMessage`)) LIMIT 1;
+INSERT INTO `table_relation` VALUES ('report_config', 'report_output', 'cascade', null, 'reportId', '9', null, null, '0', '0', '0', null, '0', null, null, null);
 
 alter table report_config add column isOneClickReport tinyint(4) not null default 0;
 
