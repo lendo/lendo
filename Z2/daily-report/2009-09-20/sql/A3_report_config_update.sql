@@ -14,6 +14,48 @@ INSERT INTO `tab` VALUES ('404', null, '7', 'Stats Report', '9', '/admin/v2repor
 -- Add New Report Config Records 
 -- ----------------------------
 
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Email Open Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '133', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, null, 'Email Click-through Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '134', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, null, 'Email Bounce Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '135', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, null, 'Email Opt-out Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '136', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, null, 'Invalid Email Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '137', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Name Badge Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '121', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Activity Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '180', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Due Activity Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '181', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Declined Donation Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '141', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Recurring Donation Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '148', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Declined Recurring Donation Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '149', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Cancelled Recurring Donation Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '1400', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Matching Donation Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '146', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Current Membership Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '170', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Membership Due', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '171', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Membership Over Due', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '172', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Membership Cancellation Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '173', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Membership Auto Renewal Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '174', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Expired Membership Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '175', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Top Seller Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '120', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Transaction Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '160', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Declined Transaction Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '161', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Expired Credit Card Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '162', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'LYBUNTS Donor Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '154', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'SYBUNTS Donor Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '155', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Soft Credit Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '1401', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Stats Report', null, null, null, '1', '0', null, null, '0', '0', '200', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'LYBUNTS Member Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '215', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'LYBUNTS Event Registrant Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '216', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'LYBUNTS Store Customer Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '217', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'SYBUNTS Member Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '219', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'SYBUNTS Event Registrant Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '220', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'SYBUNTS Store Customer Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '221', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Social Fundraisers', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '239', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'People Who Have Received Material', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '249', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Largest Donor(Top 1 Donor)', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '223', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Top 25 Donor', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '224', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Top 100 Donor', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '225', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Top 25 Members', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '231', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Top 100 Members', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '232', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Members Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '233', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES (null, null, 'Sample System', 'Top 100 Buyer Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '237', null, null, null, null, '0');
 
 
 -- ----------------------------
