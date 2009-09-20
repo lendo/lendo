@@ -3,9 +3,7 @@ CREATE TABLE `report_output_system` (
   `reportId` int(11) NOT NULL,
   `lookUpId` varchar(50) NOT NULL,
   `lookUpIdType` int(11) NOT NULL default '0',
-  PRIMARY KEY  (`id`),
-  KEY `fk_system_to_report_config` (`reportId`),
-  CONSTRAINT `fk_system_to_report_config` FOREIGN KEY (`reportId`) REFERENCES `report_config` (`id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -15,11 +13,7 @@ CREATE TABLE `report_output_custom` (
   `lookUpId` varchar(50) NOT NULL,
   `lookUpIdType` int(11) NOT NULL default '0',
   `userId` varchar(11) NOT NULL,
-  PRIMARY KEY  (`id`),
-  KEY `fk_user_to_report_config` (`reportId`),
-  KEY `fk_report_output_to_user` (`userId`),
-  CONSTRAINT `fk_report_output_to_user` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`),
-  CONSTRAINT `fk_user_to_report_config` FOREIGN KEY (`reportId`) REFERENCES `report_config` (`id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -28,9 +22,7 @@ CREATE TABLE `report_output` (
   `reportId` int(11) NOT NULL,
   `lookUpId` varchar(50) NOT NULL,
   `lookUpIdType` int(11) NOT NULL default '0',
-  PRIMARY KEY  (`id`),
-  KEY `fk_to_report_config` (`reportId`),
-  CONSTRAINT `fk_to_report_config` FOREIGN KEY (`reportId`) REFERENCES `report_config` (`id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
