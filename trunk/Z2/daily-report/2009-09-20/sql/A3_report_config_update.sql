@@ -14,12 +14,6 @@ INSERT INTO `tab` VALUES ('404', null, '7', 'Stats Report', '9', '/admin/v2repor
 -- Add New Report Config Records 
 -- ----------------------------
 
-INSERT INTO `report_config` VALUES ('155', null, 'Sample System', 'Largest Donor(Top 1 Donor)', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '223', null, null, null, null, '0');
-INSERT INTO `report_config` VALUES ('156', null, 'Sample System', 'Top 25 Donor', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '224', null, null, null, null, '0');
-INSERT INTO `report_config` VALUES ('157', null, 'Sample System', 'Top 100 Donor', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '225', null, null, null, null, '0');
-INSERT INTO `report_config` VALUES ('158', null, 'Sample System', 'Top 25 Members', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '231', null, null, null, null, '0');
-INSERT INTO `report_config` VALUES ('159', null, 'Sample System', 'Top 100 Members', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '232', null, null, null, null, '0');
-INSERT INTO `report_config` VALUES ('161', null, 'Sample System', 'Top 100 Buyer Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '237', null, null, null, null, '0');
 INSERT INTO `report_config` VALUES ('100046', null, 'Sample System', 'Email Open Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '133', null, null, null, null, '0');
 INSERT INTO `report_config` VALUES ('100047', null, null, 'Email Click-through Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '134', null, null, null, null, '0');
 INSERT INTO `report_config` VALUES ('100048', null, null, 'Email Bounce Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '135', null, null, null, null, '0');
@@ -56,6 +50,12 @@ INSERT INTO `report_config` VALUES ('100078', null, 'Sample System', 'SYBUNTS St
 INSERT INTO `report_config` VALUES ('100079', null, 'Sample System', 'Social Fundraisers', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '239', null, null, null, null, '0');
 INSERT INTO `report_config` VALUES ('100080', null, 'Sample System', 'People Who Have Received Material', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '249', null, null, null, null, '0');
 INSERT INTO `report_config` VALUES ('100081', null, 'Sample System', 'Members Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '233', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES ('100082', null, 'Sample System', 'Largest Donor(Top 1 Donor)', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '223', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES ('100083', null, 'Sample System', 'Top 25 Donor', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '224', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES ('100084', null, 'Sample System', 'Top 100 Donor', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '225', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES ('100085', null, 'Sample System', 'Top 25 Members', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '231', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES ('100086', null, 'Sample System', 'Top 100 Members', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '232', null, null, null, null, '0');
+INSERT INTO `report_config` VALUES ('100087', null, 'Sample System', 'Top 100 Buyer Report', null, null, null, '1', '0', 'Standard Report', null, '0', '0', '237', null, null, null, null, '0');
 
 
 -- ----------------------------
