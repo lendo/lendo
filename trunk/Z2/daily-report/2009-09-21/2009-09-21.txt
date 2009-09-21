@@ -1,0 +1,14 @@
+1.房子，医院。
+2.解决onclick report里面关于select column的问题。
+3.解决column的保存的问题。
+4.完成数据库脚本的导出。
+
+
+
+
+
+
+
+schedule:
+1.看JIRA上的BUG。
+2.修改/2009-09-18/problem.txt里面的内容。
