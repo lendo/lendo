@@ -10,7 +10,8 @@
 4.今天在导出数据结构的时候，差点遇到一个大麻烦，我用变化的主键作为了关联对象，
   那么上线的时候，这个主键是不定的，还好在report_config中有一个固定report字段，
   否则会搞出大麻烦，以后再开始建立数据结构的时候，一定要小心这些问题。
-
+5.select columns是在V2ReportOneClickCategoryAction将session的参数remove，这很不好。
+  明天看是否还有更好的解决方案。
 
 
 
@@ -25,8 +26,7 @@
 schedule:
 1.这个修改还有些问题：
   原来的OneClickReport，我改了部分代码，但是也导致管理员无法进入Select Columns界面，所以在Session里面加了一个标志位来判断。
-2.检查所有select columns，或许会有错。
 3.保存column的地方或许会有小bug,有时候保存不了。
 3.看JIRA上的BUG。
-4.修改/2009-09-18/problem.txt里面的内容
+4.修改/2009-09-18/problem.txt里面的内容。
 4.导出数据脚本。
