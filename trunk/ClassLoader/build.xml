@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="ClassLoader" default="run" basedir=".">
+	<property file="target.properties" />
+	<property environment="env" />
+	<property name="catalina.home" value="${env.CATALINA_HOME}" />
+
+	<path id="classpath">
+		<fileset dir="${basedir}/lib">
+			<include name="**/*.jar" />
+		</fileset>
+		<pathelement location="${dist}" />
+	</path>
+
+	<target name="init">
+		<echo message="#----------- 初始化工程编译环境 -----------#" />
+		<mkdir dir="${dist}" />
+		<mkdir dir="${build}" />
+		<mkdir dir="${report}" />
+	</target>
+
+	<target name="compile" depends="init">
+		<echo message="#----------- 编译工程源代码 -----------#" />
+		<javac srcdir="${src}" destdir="${dist}" debug="on" deprecation="on" optimize="on">
+			<classpath refid="classpath" />
+		</javac>
+		<javac srcdir="${src}" destdir="${build}" debug="on" deprecation="on" optimize="on">
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+
+	<target name="build" depends="compile">
+		<echo message="#----------- 打包${jar} -----------#" />
+		<jar jarfile="${jar}" basedir="${dist}" />
+	</target>
+
+	<target name="run" depends="build">
+		<echo message="#----------- 设置运行环境的classpath -----------#" />
+		<echo message="#----------- 从${dist}中运行 -----------#" />
+		<junit printsummary="on" showoutput="true" errorproperty="junit.failed" failureproperty="junit.failed" fork="true" dir="${dist}">
+			<classpath refid="classpath" />
+			<formatter type="brief" />
+	        <formatter type="xml" />
+			<batchtest todir="${report}">
+				<fileset dir="${dist}">
+					<include name="**/*Test.*" />
+				</fileset>
+			</batchtest>
+		</junit>
+		<junitreport todir="${report}">
+			<fileset dir="${report}">
+				<include name="TEST-*.xml" />
+			</fileset>
+			<report format="frames" todir="${report}" />
+		</junitreport>
+		<java classpathref="classpath" classname="com.waioo.classloader.Main"/>
+	</target>
+
+	<target name="clean">
+		<echo message="#----------- 清理ANT运行环境 -----------#" />
+		<delete dir="${dist}" />
+		<delete dir="${build}" />
+		<delete file="${jar}" />
+		<delete dir="${report}" />
+	</target>
+</project>
