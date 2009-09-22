@@ -1,0 +1,54 @@
+1.Company Name not blank returns blank company names on Primary Contact List search
+  这是因为该使用:ifnull(company.name, cc.companyName)却使用了:company.name。
+  修改方法：将ReportPreparer里面的所有join company的地方都join company_contact。
+  
+2.将userType原来按user表的userType来判断改为用account里面的isCompanyAccount来判断。
+
+3.更新数据库的脚本：
+  Donor List by Attribute的一个字段和Donation Detail Report一个字段混淆了：
+  update report_output_system set reportId=3 where reportId=4 and lookUpId=195;
+  更新Default-0里面的一条记录的内容：
+  update report_output_lookup set columnName='ifnull(company.name, cc.companyName)' where id=117;
+  update report_output_lookup set columnName='if(account.isCompanyAccount=1,'Organization','Individual')' where id=377;
+  
+4.On the Primary Contact List report, I’m not seeing how to exclude those who are deceased or do not want to be contacted. 
+  张总已修改。
+
+
+
+
+
+
+
+
+
+
+
+schedule:
+(1) Event custom fields are no longer available in event reports anywhere. A lot of people do the Attendee report to find out which people have selected a specific T-shirt size or what band instrument they play or whatever. The Attendee report used to display that data but it’s not there anymore, nor is it one of the available columns in the Select Columns list. 
+
+ 
+
+(2) I’m not seeing Additional Contact as an available result column anywhere either
+
+ 
+
+(3) Add Company Title to the search
+
+ 
+
+(4) Add Event and Activity search tab to Mailing, Primary Contact and Stats Search
+
+ 
+
+(6) Is there a summary view of our saved reports where I can quickly view who created the report and when without clicking on each individual report (like there was previously)?  
+
+
+
+(8) Would it be possible to add the PDF option back into the reports tab.
+
+ 
+
+
+1.看JIRA上的BUG。
+2.修改/2009-09-18/problem.txt里面的内容。
