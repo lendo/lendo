@@ -26,15 +26,17 @@ public class Main {
          * 注意这两段代码的区别，静态初始化代码是在:"类第一次被实例化的时候才被调用，而且仅仅调用一次"
          * 而不是"在类第一次被加载的时候被调用"
          */
-        
-        Class clazz1 = Class.forName("com.waioo.classloader.A",false,ClassLoader.getSystemClassLoader());
+//      Class clazz1 = Class.forName("com.waioo.classloader.A",false,ClassLoader.getSystemClassLoader());
+        System.out.println(ClassLoader.getSystemClassLoader());
 //      Class clazz2 = Class.forName("com.waioo.classloader.A",true,ClassLoader.getSystemClassLoader());
 //      Printable p = (Printable)clazz.newInstance();
         
-        URL url = new URL("file:/e:/workspace/eclipse/ClassLoader/test/");
+        URL url = new URL("file:/e:/workspace/eclipse/ClassLoader/build/");
         URLClassLoader classLoader = new URLClassLoader(new URL[]{url});
         Class clazz2 = classLoader.loadClass("com.waioo.classloader.A");
-        Printable p1 = (Printable)clazz2.newInstance();
+        System.out.println(clazz2.newInstance());
+        Printable p1 = (Printable)clazz2.newInstance(); 
         p1.print();
+        System.out.println("///////////////");
 	}
 }
