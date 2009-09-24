@@ -11,4 +11,4 @@
 
 schedule:
 1.看JIRA上的BUG。
-2.修改/2009-09-18/problem.txt里面的内容。
+2.修改/2009-09-18/problem.txt里面的内容(还剩一项，one-click report里面两个store的report放到了Transaction module)。
