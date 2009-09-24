@@ -1,0 +1,7 @@
+在利用任何一个客户数据库进行测试的时候，都要注意将客户的邮件和gateway设置更改一下，以免造成误操作。
+  
+a,不向客户发Email的问题：删除system_setting里面的第一行(Mail Server)，修改fakeEmailRecipient这字段的值为1。
+
+b,本地测试：修改organization_bio，将两个email改为:info@z2systems.com，同时修改orgCode=test。
+
+c,不在测试的时候向客户信用卡帐户收费：将gateway里面用户的帐户的用户名和密码删除，修改testMode=1,trailMode=1。

@@ -1,0 +1,2 @@
+(1) 如果在<Script type="text/javascript" src=""></Script>中src参数是空，可能会导致数据的重复提交，这会造成一些问题。
+    对img标签的src属性也是一样。

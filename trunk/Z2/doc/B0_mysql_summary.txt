@@ -1,0 +1,5 @@
+1.mysql的temporary table在sql里面只能打开一次，所以如果需要join两次，需要复制两个相同的temporary table。(?)为什么要这么做
+
+2.mysql快速执行数据库脚本命令：mysql -u root -p#### dbName < c:\path\aaa.sql
+
+3.select * from A left join B on A.id=B.id where A.id>10 equals select * from A inner join B on A.id=B.id and A.id>10
