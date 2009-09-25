@@ -2,7 +2,13 @@
   换成了1199，但在运行过程中，每次总会出现异常，要连接1099端口，这是因为在%JBOSS_HOME%/server/standard/conf/jndi.properties
   这个文件里面没有配置端口信息，所以ServiceLocator每次都会去默认的1099端口连接，所以如果改了jndi的端口为非1099，需要将这个文件
   的内容改为和tomcat里面配置的jndi端口一致。
-
+  
+2,ant,修改的系统时间再改回来的时候，会出现"...modified in the future."这种情况。
+  这个时候，如果不关闭cmd窗口，那么不管如何改系统时间，都要出现这行提示，可能是因为
+  ant执行的时候，比较的时间是cmd窗口记录的这个文件的修改时间。只要改了时间，关闭cmd
+  窗口，再重新打开，重新build，就好了。
+  
+3,修改Membership的几个报表，将membership_listing.status=2这个条件去掉。
 
 
 schedule:
