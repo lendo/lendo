@@ -1,4 +1,7 @@
-
+1,在工程中每次部署完了以后，运行时，偶尔总会出现无厘头的异常，本身我在build之前已经把target.properties里面关于jndi的端口
+  换成了1199，但在运行过程中，每次总会出现异常，要连接1099端口，这是因为在%JBOSS_HOME%/server/standard/conf/jndi.properties
+  这个文件里面没有配置端口信息，所以ServiceLocator每次都会去默认的1099端口连接，所以如果改了jndi的端口为非1099，需要将这个文件
+  的内容改为和tomcat里面配置的jndi端口一致。
 
 
 
