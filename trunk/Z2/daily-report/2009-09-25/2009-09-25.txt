@@ -21,6 +21,8 @@
 
 schedule:
 
+注意妈的生日。
+
 1, Event custom fields are no longer available in event reports anywhere. A lot of people do the Attendee report to find out which people have selected a specific T-shirt size or what band instrument they play or whatever. The Attendee report used to display that data but it’s not there anymore, nor is it one of the available columns in the Select Columns list. 
 
 2, I’m not seeing Additional Contact as an available result column anywhere either
