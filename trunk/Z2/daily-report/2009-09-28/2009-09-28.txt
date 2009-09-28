@@ -1,0 +1,33 @@
+1.在Event Summary Report里面，由于join了attendee，所以导致event的totalAmount不对，现在将这个totalAmount移除。
+  通过temp表先算出来，然后再join进去，在Default-0里面要执行这样一条语句：
+  UPDATE `report_output_lookup` SET `columnName`='temp53.totalAmount' WHERE (`id`='417')  
+  
+2.在Search.xml里面加入了filter_tab的id=3333的记录，目的是为了在Mailing Report里面能够让客户选择lastDonationDate查询条件。
+
+3.Can’t search by Last Donation Date anymore, 
+  or at least I can’t see where to do that. 
+  This is big because people want to do searches on whose last donation was before a certain date etc. 
+  I can include the column in the results, but I can’t filter the search based on that data.
+
+
+schedule:
+
+注意妈的生日。
+
+注意给爸买电脑配件。
+
+2, I’m not seeing Additional Contact as an available result column anywhere either
+
+3, Add Company Title to the search
+ 
+4, Add Event and Activity search tab to Mailing, Primary Contact and Stats Search
+
+5, Is there a summary view of our saved reports where I can quickly view who created the report and when without clicking on each individual report (like there was previously)?  
+
+6, Would it be possible to add the PDF option back into the reports tab.
+
+8, Since the Deceased, No Email and No Solicitation qualifiers are in the first Group now instead of as Query Filters, does that mean that any groups that get added are not going to exclude Deceased, No Email and No Solicitation accounts? In other words, if someone doing a search adds a group, are they going to have to add those filters to each group they add?
+
+9, For some reason, if you click the calendar and select a date for Donation Date on the search criteria page, the date pops up under Expected Date instead. This happened to me and Tim Waggoner. I think we were both running Donor Reports.
+
+10,看JIRA上的BUG.
