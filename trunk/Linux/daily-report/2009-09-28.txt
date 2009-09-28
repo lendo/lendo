@@ -1,0 +1,11 @@
+1.今天搞了VI命令：
+  vi a.file
+  i
+  [input character]
+  [ESC]
+  :wq/:w filename/:q!
+2.mkdir:创建文件夹
+  touch file: 创建空文件
+  mv:剪切
+  cp:拷贝
+  写一个以.sh结尾的文件，运行时又"Permission is denied"，那是因为，还需要将此文件设置为可以运行的状态。
