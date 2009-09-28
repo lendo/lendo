@@ -9,6 +9,8 @@
   This is big because people want to do searches on whose last donation was before a certain date etc. 
   I can include the column in the results, but I can’t filter the search based on that data.
 
+4.Add Company Title to the search
+
 
 schedule:
 
@@ -17,8 +19,6 @@ schedule:
 注意给爸买电脑配件。
 
 2, I’m not seeing Additional Contact as an available result column anywhere either
-
-3, Add Company Title to the search
  
 4, Add Event and Activity search tab to Mailing, Primary Contact and Stats Search
 
