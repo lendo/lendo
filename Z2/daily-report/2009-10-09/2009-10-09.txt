@@ -1,9 +1,25 @@
-1.今天的首要任务是修改最近昨天和今天张总发的邮件的问题。
+今天的首要任务是修改最近昨天和今天张总发的邮件的问题。
+
+1.I don’t see a country field (not county) in the field selection option under the new report module :( 
+  We have a mailing going out to all of our international members, but I don’t get the name of their country in the excel sheet, please help asap… 
+  thanks
+  修改方法：在Mailing Report里面加入country列，对应的SQL为：
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'2','106','1')。
+
+2.ACH支付的时候，需要修改一下Ecom_Payment_Check_AccounT_Type，原来设置的都是Saving，以为没有用，现在要设置为按前台的选择来走。
+  修改范围：CCPProcessorACH
+3.Let’s remove the feature to change name and address to uppercase in our reporting. I heard more complaints than compliments.
+  修改范围：ReprotPreparer.
+4.Can we add the Salutation field to our search.xml? 
 
 schedule:
 
-注意妈的生日。
+注意妈的生日（明天）。
 
+晚上帮文叔查价格。
+
+1, Could you please take a look at this against your local ms database? Let me know how it goes and why the other event doesn’t have the ticket price information listed.
+   （这个问题在测试的时候，需要连接到本地的ms数据库才能进行测试）
 2, I’m not seeing Additional Contact as an available result column anywhere either
  
 4, Add Event and Activity search tab to Mailing, Primary Contact and Stats Search
