@@ -5,12 +5,16 @@
 2.在Search.xml里面加入了filter_tab的id=3333的记录，目的是为了在Mailing Report里面能够让客户选择lastDonationDate查询条件。
 
 3.Can’t search by Last Donation Date anymore, 
-  or at least I can’t see where to do that. 
+  or at least I can21w’t see where to do that. 
   This is big because people want to do searches on whose last donation was before a certain date etc. 
   I can include the column in the results, but I can’t filter the search based on that data.
 
 4.Add Company Title to the search
 
+5.解决Event Registration Report加载attendee info的问题。
+  UPDATE `report_output_lookup` SET `columnName`='group_concat(concat_ws(\' \',event_attendee.firstName,event_attendee.middleName,event_attendee.lastName),if(event_ticket_package.id is null, \'\', concat(\' (\',event_ticket_package.name,\'  $\',cast(event_ticket_package.fee as char) ,\')\')) separator \'<hr/>\')' WHERE (`id`='471')
+
+6.需要将search.xml改一下，在mailing report里面用的是1111，我把company title 加到了 1里面，现在cvs不能连，所以需要明天网络连接好了以后提交上去。
 
 schedule:
 
