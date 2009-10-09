@@ -4,7 +4,34 @@
   We have a mailing going out to all of our international members, but I don’t get the name of their country in the excel sheet, please help asap… 
   thanks
   修改方法：在Mailing Report里面加入country列，对应的SQL为：
-  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'2','106','1')。
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'2','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'5','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'13','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'16','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'8','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'9','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'10','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'12','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'14','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'15','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'33','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'34','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'53','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'1401','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'133','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'134','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'135','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'136','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'137','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'141','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'170','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'171','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'172','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'173','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'174','106','1');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'175','106','1');
+  UPDATE `report_output_map` SET `status`='1' WHERE (`reportId`='200' and `lookupGroupId`='106');
+  INSERT INTO `report_output_map` (`id`,`reportId`,`lookupGroupId`,`status`) VALUES (NULL,'233','106','1');
 
 2.ACH支付的时候，需要修改一下Ecom_Payment_Check_AccounT_Type，原来设置的都是Saving，以为没有用，现在要设置为按前台的选择来走。
   修改范围：CCPProcessorACH
