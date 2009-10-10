@@ -38,6 +38,7 @@
 3.Let’s remove the feature to change name and address to uppercase in our reporting. I heard more complaints than compliments.
   修改范围：ReprotPreparer.
 4.Can we add the Salutation field to our search.xml? 
+  修改范围：search.xml
 
 schedule:
 
