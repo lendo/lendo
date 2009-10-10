@@ -3,3 +3,7 @@
 2.mysql快速执行数据库脚本命令：mysql -u root -p#### dbName < c:\path\aaa.sql
 
 3.select * from A left join B on A.id=B.id where A.id>10 equals select * from A inner join B on A.id=B.id and A.id>10
+
+4.从来没有想过一个表的外键如果没有在数据库上指定，会对性能造成如此巨大的影响。
+  以后在创建外键了以后，不光要在代码(Hibernate)里面实现外键逻辑，而且一定要在mysql上加上外键或者是给这作为外键的一列加上index。
+  具体问题见daily-report/2009-10-10/2009-10-10.txt里面的问题2。
