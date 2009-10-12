@@ -1,0 +1,21 @@
+1.
+
+schedule:
+
+注意王子闲的生日（农历8-25,明天）。
+
+1, Could you please take a look at this against your local ms database? Let me know how it goes and why the other event doesn’t have the ticket price information listed.
+   （这个问题在测试的时候，需要连接到本地的ms数据库才能进行测试）
+2, I’m not seeing Additional Contact as an available result column anywhere either
+ 
+4, Add Event and Activity search tab to Mailing, Primary Contact and Stats Search
+
+5, Is there a summary view of our saved reports where I can quickly view who created the report and when without clicking on each individual report (like there was previously)?  
+
+6, Would it be possible to add the PDF option back into the reports tab.
+
+8, Since the Deceased, No Email and No Solicitation qualifiers are in the first Group now instead of as Query Filters, does that mean that any groups that get added are not going to exclude Deceased, No Email and No Solicitation accounts? In other words, if someone doing a search adds a group, are they going to have to add those filters to each group they add?
+
+9, For some reason, if you click the calendar and select a date for Donation Date on the search criteria page, the date pops up under Expected Date instead. This happened to me and Tim Waggoner. I think we were both running Donor Reports.
+
+10,看JIRA上的BUG.
