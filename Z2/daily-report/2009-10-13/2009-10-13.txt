@@ -45,3 +45,18 @@ schedule:
 
 11,How hard is it to make campaign name available to the transaction report? Can you take a look the code and let me know?
 
+12,张总走了以后的任务：
+
+   A.Improvement-12 & NEON-38 fix v2 template
+     Email Template的字体不能改，只能改颜色。
+   B.Improvement-13 opt-in  
+     用户点了unsubscribe后又想加入到邮件列表中，在用户点了unsubscribe以后，首先是将他的邮件地址加入email_hold_list，然后将它的account
+     的noEmail字段设置为1。在用户重新opt-in了以后，需要将他的邮件地址从email_hold_list中去掉，同时将account的noEmail字段设置为0。
+     需要在一般用户登录以后的下拉选项中加入一个链接，到一个重新subscribe的页面，目前已有这样一个页面，叫subscribe.jsp，那里面包括邮件列表和
+     用户的Email地址，这个页面是在用户不登录的情况下，现在用户已经在本系统有帐户，那么需要去掉前面两个字段。邮件列表就是email audience列表
+     不过前台能够看到的email audience列表是在new Audience的时候，distributioin为yes的邮件列表。
+   C.Improvement-3 Enhance user customizability for Activity page
+     给Activity加上custom data的功能，也就是在new Activity的时候，还有就是在system的tab下面加入一个activity custom data的设置。
+   D.Look through the defects in NEON new reporting and identify the valid bugs that need to fix.
+     这个优先级最低，改改Jira里面的BUG。
+
