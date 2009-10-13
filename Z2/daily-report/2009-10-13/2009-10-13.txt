@@ -25,7 +25,7 @@ Affected Scope:admin/formbuild/surveyResultBody.jsp
 
 schedule:
 
-注意王子闲的生日（农历8-25,明天）。
+注意王子闲的生日（农历8-25,今天）。
 
 1, Could you please take a look at this against your local ms database? Let me know how it goes and why the other event doesn’t have the ticket price information listed.
    （这个问题在测试的时候，需要连接到本地的ms数据库才能进行测试）
