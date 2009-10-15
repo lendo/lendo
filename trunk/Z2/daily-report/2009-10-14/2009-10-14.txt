@@ -17,6 +17,13 @@ UPDATE `report_output` SET `lookUpId`='475' WHERE (`reportId`='22') and (`lookUp
 UPDATE `report_output` SET `lookUpId`='474' WHERE (`reportId`='22') and (`lookUpId`='470');
 修改很麻烦，看能不能找到折中的方案。
 
+2.The PDF link in the Auto Reports is not working
+Caused By:/admin/report/timelyReportBody.jsp,去掉PDF链接，有两个地方。
+Affected Scope:/admin/report/timelyReportBody.jsp。
+
+3.Zip Code has an extra “-“ if zip suffix is blank
+
+
  
 
 schedule:
