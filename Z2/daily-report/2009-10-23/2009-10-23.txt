@@ -18,6 +18,9 @@ UPDATE `report_output` SET `lookUpId`='475' WHERE (`reportId`='22') and (`lookUp
 UPDATE `report_output` SET `lookUpId`='474' WHERE (`reportId`='22') and (`lookUpId`='470');
 修改很麻烦，看能不能找到折中的方案。
 
+2.完成Email Template Font的按钮修改。
+  Affected Scope:np/upload/editor/editor_toolbar.js
+
 schedule:
 a, 要跟着一本教材走，去书城买几本成系统的教材来学。同时也可以系统学习新概念英语。
 
@@ -40,12 +43,4 @@ b, 学英语要多看英语电影，有上下文，更容易记单词。
 10,看JIRA上的BUG.
 
 11,How hard is it to make campaign name available to the transaction report? Can you take a look the code and let me know?
-
-12,张总走了以后的任务：
-
-   A.Improvement-12 & NEON-38 fix v2 template
-     Email Template的字体不能改，只能改颜色。
-
-   D.Look through the defects in NEON new reporting and identify the valid bugs that need to fix.
-             这个优先级最低，改改Jira里面的BUG。
 
