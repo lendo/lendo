@@ -17,7 +17,13 @@ UPDATE `report_output` SET `lookUpId`='475' WHERE (`reportId`='22') and (`lookUp
 UPDATE `report_output` SET `lookUpId`='474' WHERE (`reportId`='22') and (`lookUpId`='470');
 修改很麻烦，看能不能找到折中的方案。
 
-2.
+2.Fixed the bug found by Kim(2009-10-24)，修改以后，需要Kim手动去将State和City列加入到他的默认输出就好了。
+  UPDATE `report_output_map` SET `status`='1' WHERE (`reportId`='55') and (`lookupGroupId`='100');
+  UPDATE `report_output_map` SET `status`='1' WHERE (`reportId`='55') and (`lookupGroupId`='1000');
+  UPDATE `report_output_map` SET `status`='1' WHERE (`reportId`='55') and (`lookupGroupId`='1100');
+  
+3.Add donorNote column to donation info(2009-10-24 committed by Steve Henrichs).
+  INSERT INTO `report_output_lookup` (`id`,`groupId`,`tableName`,`columnName`,`status`,`displayName`,`valueListProperty`,`valueListTitle`,`valueListSortable`,`columnType`,`groupType`) VALUES (NULL,'3200','donation','donorNote','1','Donor Note','donorNote','Donor Note','1','0','50');
 
 schedule:
 a, 要跟着一本教材走，去书城买几本成系统的教材来学。同时也可以系统学习新概念英语。
