@@ -20,6 +20,7 @@ UPDATE `report_output` SET `lookUpId`='474' WHERE (`reportId`='22') and (`lookUp
 1.搞定那个妹妹的作业。
 
 schedule:
+
 a, 要跟着一本教材走，去书城买几本成系统的教材来学。同时也可以系统学习新概念英语。
 
 b, 学英语要多看英语电影，有上下文，更容易记单词。
