@@ -1,0 +1,636 @@
+##########
+# NOTICE
+##########
+
+The system described in the following documentation may be subject to some minor
+changes. See the note under "Output format" below if you'd like to be sure your
+code will be future-compatible.
+
+##########
+# URL
+##########
+
+The URL to submit payments to should have been provided to you along with this
+documentation.  If you have not received it, please contact support@bluepay.com.
+
+####################
+# INPUT FIELDS:
+####################
+
+MISSING_URL
+APPROVED_URL
+DECLINED_URL
+  -- Optional
+  For static HTML pages, these will be the URLs to return the customer to after
+payment. For programmers directly calling the API, these can be set to bogus
+values or omitted.  If omitted, this interface will replace them with
+its own bogus values. Do not rely on it to remain as it is today, as the bogus values may change.
+
+MERCHANT
+  -- Required
+  Your 12-digit Bluepay Account ID
+
+PAYMENT_TYPE
+  -- Optional
+  Can be set to 'CREDIT' for a credit-card transaction or 'ACH' for an ACH/E-check 
+transaction.
+
+TRANSACTION_TYPE
+  -- Required
+  AUTH, SALE, CAPTURE, REFUND, REBCANCEL
+  AUTH = Reserve funds on a customer's card. No funds are transferred.
+  SALE = Make a sale. Funds are transferred.
+  CAPTURE = Capture a previous AUTH. Funds are transferred.
+  REFUND = Reverse a previous SALE. Funds are transferred.
+  REBCANCEL = Cancel a rebilling sequence.
+
+CC_NUM 
+  -- Required for AUTH/SALE --Optional for REFUND
+   The credit card number.
+CVCCVV2
+  -- Optional
+  The three or four digit validation
+code on the back of the card.
+CC_EXPIRES
+  -- Required unless PAYMENT_TYPE is ACH or you include an RRNO
+     (as for REFUNDs)
+  The expiration date in MMYY format.
+
+ACH_ROUTING
+  -- Required if PAYMENT_TYPE is ACH
+  Contains the nine-digit bank routing ("ABA") number for the customer's checking
+or savings account.
+ACH_ACCOUNT
+  -- Required if PAYMENT_TYPE is ACH
+  Contains the customer's checking or savings account number.
+ACH_ACCOUNT_TYPE
+  -- Optional
+  Set to 'C' for a checking account or 'S' for a savings account.  Defaults to 'C' if not set.
+DOC_TYPE
+  -- Optional
+  Can be one of the following:
+    'PPD': Indicates you have a personal signed agreement on file for the customer, this is the default if not set.
+    'CCD': Indicates you have a company-signed agreement on file for the customer.
+    'WEB': Indicates the customer has agreed to the charges via an internet-based or electronic form.
+    'TEL': Indicates you have a recorded telephone call on file with the customer verbally agreeing to be charged.
+    'ARC': Indicates you have an actual signed, voided check from the customer.
+IS_CORPORATE
+  -- Optional
+  Set IS_CORPORATE to 1 to indicate this is a transaction for a company instead
+of an individual.
+COMPANY_NAME
+  -- Optional
+  COMPANY_NAME contains the name of the company. Optional unless IS_CORPORATE is set to 1.
+
+AMOUNT
+  -- Required for AUTH/SALE -- Optional for REFUND
+  If AMOUNT is sent for a REFUND, it will REFUND the AMOUNT sent. It will only refund up to the original
+transaction AMOUNT. If not sent, it will REFUND the full amount.  
+
+
+ORDER_ID
+INVOICE_ID
+AMOUNT_TAX
+AMOUNT_TIP
+AMOUNT_FOOD
+AMOUNT_MISC
+COMMENT
+  -- Optional
+  These fields may be required for full qual rates.
+
+NAME
+  Can be set to the first and last name separated by a space. We perfer NAME1 and NAME2 as seperate fields.
+NAME1
+NAME2
+ADDR1
+  May be required for the best rates.
+ADDR2
+CITY
+STATE
+ZIPCODE
+  May be required for the best rates.
+COUNTRY
+PHONE
+EMAIL
+NAME
+NAME1
+NAME2
+-- Optional
+NAME can be set to the first and last name, separated by a space, or 
+if possible, we prefer NAME1 and NAME2 as separate fields.  ADDR1 and ZIPCODE
+may be required for the best rates.  ADDR1, CITY, STATE, ZIPCODE, and PHONE 
+are required when performing ACH.
+
+MODE
+  -- Optional
+  "LIVE" is required to run a real transaction.
+  "TEST" is allowed for test, but is the default if not sent or invalid.
+
+REBILLING
+  -- Required for rebillings
+  1 for rebilling. 
+  0 or absent for regular non-rebilling.
+
+REB_FIRST_DATE
+  -- Required for rebillings
+  The date of the first rebilling. Explained further below.
+  Has two valid formats:
+    "YYYY-MM-DD HH:MM:SS" Hours, minutes, and seconds are optional.
+    "XX UNITS" Relative date as explained below. Marked from the time of the
+    transaction (i.e.: 10 DAYS, 1 MONTH, 1 YEAR)
+
+REB_EXPR
+  -- Required for rebillings
+  The period of time in-between rebillings.  
+  Relative date format same as REB_FIRST_DATE: "XX UNITS" explained above.
+
+REB_CYCLES
+  -- Optional
+  Number of times to rebill. Don't send or set to "" for infinite rebillings (or
+until canceled).
+
+REB_AMOUNT
+  -- Optional
+  Amount to rebill. Defaults to amount of transaction for rebillings.
+
+RRNO
+  -- Required for CAPTURE, REFUND, and REBCANCEL
+  RRNO of template transaction or any rebilling transaction in the sequence to be
+canceled if TRANSACTION_TYPE is REBCANCEL.
+  RRNO of the AUTH to CAPTURE if TRANSACTION_TYPE is CAPTURE.
+  RRNO of the SALE to REFUND if TRANSACTION_TYPE is REFUND.
+
+CUSTOM_ID
+  -- Optional
+  Up to 32 characters of your own information.
+
+CUSTOM_ID2
+  -- Optional
+  Up to 32 characters of your own information.
+
+###
+# NEW SWIPE OPTIONS
+###
+
+Swipe over IP is fully supported.  Use of either of the following options will result
+in the transaction being flagged as "card-present".
+
+TRACK2
+  -- optional
+  This field should contain the TRACK2 data from the card's swipe.  It should include
+ONLY the track2 data.
+
+SWIPE
+  -- optional
+  This should include the entire swiped data from a cardreader.  If used, the creditcard
+holder's name and card number and expiration date will be taken from this field, and do not need to be 
+sent in the NAME or NAME1/NAME2 and CC_NUM fields.
+
+TAMPER_PROOF_SEAL
+  -- Required
+  MD5 hash for security. This is computed by the merchant as follows:
+MD5SUM(The Merchant's Secret Key + MERCHANT + TRANSACTION_TYPE + AMOUNT +
+REBILLING + REB_FIRST_DATE + REB_EXPR + REB_CYCLES + REB_AMOUNT + AVS_ALLOWED +
+AUTOCAP + MODE) in hex format.
+  Where '+' represents string concatenation and the field names represent the
+contents of the respective fields - or "" (empty string - no space) if empty or
+unsent.
+  See "Examples" below for further information.
+
+TPS_DEF
+  -- Optional
+  ** NOTICE: THE USE OF THIS FIELD CAN POSSIBLY WEAKEN YOUR SECURITY.  PLEASE
+    BE SURE YOU UNDERSTAND HOW THE TAMPER_PROOF_SEAL WORKS BEFORE YOU CONSIDER
+    USING THIS OPTION. **
+  This option allows a merchant to determine which fields are included in the 
+TAMPER_PROOF_SEAL. If set blank or not sent, it will default to the fields
+as described under TAMPER_PROOF_SEAL, above. If set to a space-separated list
+of field names, then the TPS will be calculated using the fields listed, in order.
+
+  The secret key is always the first field, and should not be listed.
+
+  This allows you to create a simple donation form by specifying a TPS that does not
+include the AMOUNT in the example below:
+
+Imagine your account ID is 123412341234 and you wanted to run
+a $10.00 TEST transaction.  
+
+Your secret key is abcdabcdabcdabcd.
+
+You set TPS_DEF to:
+"MERCHANT AMOUNT MODE"
+The system would expect the TAMPER_PROOF_SEAL to be an MD5 of the 
+following string:
+"abcdabcdabcdabcd12341234123410.00TEST"
+
+###
+# DEPRECATED OPTIONS
+###
+
+These options are still valid, but are considered useless for various reasons:
+
+AUTOCAP
+  -- Optional for AUTH
+  1 for Automatic Capture.
+  0 for regular transaction processing.
+  If this is set to 1, and the AUTH is successful, the AUTH will automatically be
+CAPTURED in 15 minutes.
+HISTORICAL NOTE: This was only used because our system would only perform scrubbing
+on AUTH transactions.  Now it is possible to get scrubbing on SALE as well.
+
+AVS_ALLOWED
+  -- Optional for AUTH
+  A string containing the AVS responses the merchant considers valid. If the AUTH
+returns an AVS response that is not in this list, the AUTH will automatically be
+declined. If set to '#' or not sent, all AVS responses are considered valid. For
+example, if the merchant wishes to allow AVS responses 'X', 'Y', and 'Z', he
+sets this to 'XYZ'.
+HISTORICAL NOTE: It is now recommended to set these options for the account within
+the account admin web interface.  
+
+
+CVV2_ALLOWED
+  -- Optional for AUTH
+  This functions identically to AVS_ALLOWED, but for CVV2 responses instead.
+HISTORICAL NOTE: It is now recommended to set these options for the account within
+the account admin web interface.  
+
+
+
+###
+# NOTES:
+###
+
+Format for REB_EXPR and REB_FIRST_DATE expressions is:
+"XXX DAY" or
+"XXX MONTH" or
+"XXX YEAR" or
+"XXX HOUR" or
+"XXX MINUTE"
+
+Where XXX is any valid integer.  For example, "10 MINUTE" represents, of course,
+10 minutes. 
+
+#####################
+# OUTPUT FIELDS:
+#####################
+
+PAYMENT_ACCOUNT
+  Type: character varying(32)
+  The payment account used for the transaction. If a credit card is used, 12 x's followed by the last four digits will be returned. If a check is used the following string is returned "<account type>:<routing number>:<x's><last frour digits of account number>" ie. "C:123123123:xxxxxx4321". 
+  Account Type: 'C' is checking and 'S' is savings. 
+
+Result
+ "ERROR" or "APPROVED" or "DECLINED" or "MISSING"
+  This is the field programmers should be checking to determine the transaction's
+status.
+
+If Result="DECLINED" or "APPROVED" then we add:
+RRNO
+  This is the transaction ID of the newly run transaction, for use with REBCANCEL, CAPTURE, or REFUND.
+
+If Result="APPROVED" then we add:
+AVS
+  A single-character identifying the AVS response.
+CVV2
+  A single character identifying the CVV2 response.
+AUTH_CODE
+  A six-character pseudo-ID from the processing network.
+BANK_NAME
+  Up to 64 characters containing the customer's bank name. 
+PAYMENT_TYPE
+  Up to 8 characters. May be 'ACH' for ACH transactions, or 'CREDIT' for credit card transactions.
+CARD_TYPE
+  A four-character indicator of the credit card type used, if any.  Possible values are:
+  AMEX = American Express, 
+  MC   = MasterCard, 
+  DISC = Discover, 
+  VISA = VISA, 
+  JCB  = JCB, 
+  DCCB = Diner's Club or Carte Blanche,
+  ENRT = EnRoute,
+  BNKC = BankCard,
+  SWTC = Switch,
+  SOLO = Solo
+ORDER_ID
+INVOICE_ID
+
+And if Result=APPROVED and this was a template for rebilling, we add:
+REBID
+  A 12-digit identifier for the rebilling, currently unused. May be handy for identifying which rebilling to modify or cancel in the future. This is NOT the RRNO you use in a REBCANCEL. Use the RRNO field.
+
+And finally, if Result="MISSING" then we add:
+MISSING
+  Name of missing field.
+
+MESSAGE
+  Human-readable description. On Approval, reads, "APPROVED". On Error, describes error.
+  The actual contents of this field can vary, even between supposedly "identical"transactions, so do not attempt any machine-parsing on the contents of this string.
+
+################
+# INPUT FORMAT:
+################
+Input is expected in the form of a standard HTTP POST operation. All parameters
+are encoded in the body of the POST.
+
+################
+# OUTPUT FORMAT:
+################
+
+Output is in the form of an HTTP "302" response which is "Found object moved."
+This will result in a browser redirect if the POST originates from a customer's
+browser, allowing a simple interface for simple merchants.
+
+## Note
+For programmers, please keep in mind that the HTTP BODY contains undefined
+information. You should not rely on this if you find the return parameters
+there. Instead, the parameters are properly read from the HTTP HEADER in the
+header "Location", appended to the selected redirection URL in URL-encoded
+format. You may safely parse them from the header. We may be adding additional
+fields, so in your code please do not rely on the order or number of fields. If
+you follow these guidelines and make it simple to change the URL you submit to,
+you can be assured your code will be able to work without changes in any future
+versions of the Bluepay API we may release.
+
+
+######################
+# How Rebilling Works:
+######################
+
+Our rebilling engine runs transactions at regular intervals. The information for
+the transaction (customer name, is it a test transaction, the credit card
+number, etc) is taken from a "template transaction."
+
+At present, the only way for a merchant to specify a template transaction for a
+rebilling sequence is while submitting said transaction.
+
+The template transaction MUST have been processed successfully to be valid for
+rebilling; if the template transaction was not processed or returned DECLINED,
+the rebilling sequence will not run - or even get created in the first place.
+
+The merchant sends in the transaction as an AUTH or SALE just as usual, and the
+transaction is run just as usual.  If it is successful, a rebilling sequence
+will
+be created with this transaction as its template.
+
+The first rebilling will occur at REB_FIRST_DATE or now + REB FIRST DATE if
+REB_FIRST_DATE is an expression.
+
+Each time a rebilling is run, the parameters for the transaction are pulled from
+the template transaction, except:  The TRANSACTION_TYPE of a rebilling is always
+a SALE, even if the template was an AUTH.  The AMOUNT of a rebilling is set to
+the amount that was sent in as the REB_AMOUNT in the template transaction,
+or if there was none, then it too is taken from the template's transaction
+AMOUNT.
+
+If a number of cycles were set in the template transaction, then that number will
+be decremented at each rebilling, and the sequence will be set to stop when 0
+is reached. If there were no cycles specified, it will continue until canceled
+with a REBCANCEL transaction or manually in the Web Admin system.
+
+####################
+# Generic Examples:
+####################
+(Uninteresting fields omitted in all examples)
+
+This merchant's "salt" or "secret key" is currently set to:
+"raouhc.jbefiougb"
+This is not indicative of an actual secret key. Secret keys will be 32 random
+alphanumeric characters.
+
+MODE not sent except as noted -- transactions will default to TEST transactions.
+Note though that the TPS is calculated with the value the merchant actually sent
+-- or failed to, in this case. Not "TEST", but rather "".
+
+EXAMPLE ONE:
+Perform a ten-dollar sale.
+
+MERCHANT='demo'
+TRANSACTION_TYPE='SALE'
+AMOUNT='10.00'
+REBILLING not sent
+REB_FIRST_DATE not sent
+REB_EXPR not sent
+REB_CYCLES not sent
+REB_AMOUNT not sent
+TAMPER_PROOF_SEAL = '9515409f78817e9da5ee396fb24fea7d'
+
+TAMPER_PROOF_SEAL was calculated as md5sum("raouhc.jbefiougbdemoSALE10.00").
+
+Remember, it's:
+md5sum(The Merchant's Secret Key + MERCHANT + TRANSACTION_TYPE + AMOUNT +
+REBILLING + REB_FIRST_DATE + REB_EXPR + REB_CYCLES + REB_AMOUNT + AVS_ALLOWED +
+AUTOCAP + MODE) in hex format.
+
+If any of those are missing, they get skipped, or you can think of it as
+entering them as "" (the empty string).
+
+Here's a command line example:
+
+% perl -e 'use Digest::MD5; print
+Digest::MD5::md5_hex("raouhc.jbefiougbdemoSALE10.00") . "\n";'
+9515409f78817e9da5ee396fb24fea7d>
+%
+
+Perl is also available for free for Windows as "ActivePerl" from ActiveState.
+
+A simple merchant who only sells one item from a static page, passing the
+information through the customer's browser as they will with the basic Weblink
+system, can calculate this number once and put it into his static HTML form, and
+be secure.
+
+A more advanced merchant with a programmer or a shopping cart using the Weblink
+as an API can recalculate it for each transaction on the fly, allowing differing
+transaction amounts.
+
+EXAMPLE TWO:
+
+A membership site would like to give 1 free month to a new member, then charge
+$39.99 per month until the customer asks to cancel:
+
+MERCHANT='demo'
+TRANSACTION_TYPE='AUTH'
+AMOUNT='1.00'
+REBILLING='1'
+REB_FIRST_DATE='1 MONTH'
+REB_EXPR='1 MONTH'
+REB_CYCLES="" (or not sent)
+REB_AMOUNT='39.99'
+TAMPER_PROOF_SEAL = 'cffd8d5f89f97dee29fbd233472422eb'
+
+In this case, the TPS was generated from the string
+"raouhc.jbefiougbdemoAUTH1.0011 MONTH1 MONTH39.99".
+
+EXAMPLE THREE:
+
+A cable TV company charges $150.00 up front and then $12.00 every month
+thereafter for a one-year contract which must be explicitly renewed:
+
+MERCHANT='demo'
+TRANSACTION_TYPE='SALE'
+AMOUNT='150.00'
+REBILLING='1'
+REB_FIRST_DATE='1 MONTH'
+REB_EXPR='1 MONTH'
+REB_CYCLES='11' (they are counting the first month at $150 as one of the
+contract months. If not, this would be 12)
+REB_AMOUNT='12.00'
+TAMPER_PROOF_SEAL = '6b294f9f6c43eb1c76baa6890508dc46'
+
+
+####################################################
+# Static HTML Example and more on TAMPER_PROOF_SEAL
+####################################################
+
+First off, I did a Google search for "md5sum windows hex" and this was the
+second link I found:
+http://www.di-mgt.com.au/src/digsum.zip
+
+This should not be taken as an endorsement of the above program; it simply
+appears to be the first free md5 checksum program we found.  Any will do.
+
+The merchant will need to download a package similar to that that provides an
+md5sum program, if they do not already have the ability to make MD5 sums. It's
+important that the program they use can a) Make hexadecimal checksums (as
+opposed to base 64 or otherwise) and b) use text mode, as opposed to binary.
+
+Now, Mom and Pop Merchant want to create a simple HTML payment form for their
+simple website. Normally, they'd make something like this:
+
+(The below transaction information is for a $10.00 AUTH at the time of "sale"
+and then $5.00 rebillings for the next 11 months. Not a very realistic schedule,
+perhaps.)
+
+<!-- HTML BEGINS HERE -->
+<html>
+<head><title>Mom and Pop Merchants</title></head>
+<body>
+
+<form action="https://secure.bluepay.com/interfaces/bp10emu" method=POST>
+
+<input type=hidden name=MERCHANT value="demo">
+<input type=hidden name=TRANSACTION_TYPE value="AUTH">
+<input type=hidden name=REBILLING value="1">
+<input type=hidden name=REB_FIRST_DATE value="1 MONTH">
+<input type=hidden name=REB_EXPR value="1 MONTH">
+<input type=hidden name=REB_CYCLES value="11">
+<input type=hidden name=REB_AMOUNT value="5.00">
+<input type=hidden name=TAMPER_PROOF_SEAL value="????">
+<input type=hidden name=AMOUNT value="10.00">
+<input type=hidden name=Order_ID value="UNUSED">
+<input type=hidden name=APPROVED_URL value="http://momandpop.com/goodpay.html">
+<input type=hidden name=DECLINED_URL value="http://momandpop.com/badpay.html">
+<input type=hidden name=MISSING_URL value="http://momandpop.com/error.html">
+<input type=hidden name=COMMENT value="SUBSCRIPTION TO WIDGET OF THE MONTH CLUB,
+1YR">
+
+<table>
+            <tr><td>Card number</td><td><input type=text name=CC_NUM
+value=""></td></tr>
+            <tr><td>CVV2</td><td><input type=text name=CVCCVV2
+value=""></td></tr>
+            <tr><td>Expiration Date</td><td><input type=text name=CC_EXPIRES
+value=""></td></tr>
+            <tr><td>NAME</td><td><input type=text name=NAME value=""></td></tr>
+            <tr><td>Address</td><td><input type=text name=Addr1
+value=""></td></tr>
+            <tr><td>Address 2</td><td><input type=text name=Addr2></td></tr>>
+            <tr><td>City</td><td><input type=text name=CITY value=""></td></tr>
+            <tr><td>State</td><td><input type=text name=STATE
+value=""></td></tr>
+            <tr><td>Zipcode</td><td><input type=text name=ZIPCODE
+value=""></td></tr>
+            <tr><td>Phone</td><td><input type=text name=PHONE
+value=""></td></tr>
+            <tr><td>Email</td><td><input type=text name=EMAIL
+value=""></td></tr>
+            <tr><td colspan=2><input type=SUBMIT value="Test it."
+name=SUBMIT></td></tr>
+</table>
+</form></body></html>
+<!-- HTML ENDS HERE -->
+
+Now we see the need for the TAMPER_PROOF_SEAL field, but Mom and Pop need to
+know what to set it to. First, they get their secret key from Bluepay, by
+whatever method they've decided to provide it. In mom and pop's case, their
+secret key is:
+
+"sakldjhflaskjfhasllsdkjfh"
+
+Now, how do Mom and Pop use the secret key to make their TAMPER_PROOF_SEAL
+correct for this transaction?
+
+First, they get an md5sum utility like the one linked above. Then they need to
+open NOTEPAD or any text editor and put in the following:
+
+"sakldjhflaskjfhasllsdkjfhdemoAUTH10.0011 MONTH1 MONTH115.00"
+(You can tell how I came up with that string by reading the documentation
+above.)
+Notably, they have to put it in without the quotes and without hitting ENTER at
+the end (which may add a new line which may change the checksum value)
+
+They save this as a file, we'll say "temp.txt" and then they run the following
+command:
+
+C:\Desktop\digsum>md5sum -t temp.txt
+
+The -t tells it to parse the file as text, not binary. This utility returns in
+hex format by default. It responds:
+
+22d2a28d4e683c7c8d753cfbf3c91b7c temp.txt
+
+Now mom and pop know they should set their TAMPER_PROOF_SEAL for this
+transaction to: 22d2a28d4e683c7c8d753cfbf3c91b7c
+
+If Mom and Pop want to change the price of their product later on, they will
+have to make a new TAMPER_PROOF_SEAL for it.
+
+<!-- HTML BEGINS HERE -->
+<html>
+<head><title>Mom and Pop Merchants</title></head>
+<body>
+
+<form action="https://secure.bluepay.com/interfaces/bp10emu" method=POST>
+
+<input type=hidden name=MERCHANT value="demo">
+<input type=hidden name=TRANSACTION_TYPE value="AUTH">
+<input type=hidden name=REBILLING value="1">
+<input type=hidden name=REB_FIRST_DATE value="1 MONTH">
+<input type=hidden name=REB_EXPR value="1 MONTH">
+<input type=hidden name=REB_CYCLES value="11">
+<input type=hidden name=REB_AMOUNT value="5.00">
+<input type=hidden name=AMOUNT value="10.00">
+<input type=hidden name=TAMPER_PROOF_SEAL
+value="22d2a28d4e683c7c8d753cfbf3c91b7c">
+<input type=hidden name=ORDER_ID value="UNUSED">
+<input type=hidden name=APPROVED_URL value="http://momandpop.com/goodpay.html">
+<input type=hidden name=DECLINED_URL value="http://momandpop.com/badpay.html">
+<input type=hidden name=MISSING_URL value="http://momandpop.com/error.html">
+<input type=hidden name=COMMENT value="SUBSCRIPTION TO WIDGET OF THE MONTH CLUB,
+1YR"></td></tr>
+
+<table>
+            <tr><td>Card number</td><td><input type=text name=CC_NUM
+value=""></td></tr>
+            <tr><td>CVV2</td><td><input type=text name=CVCCVV2
+value=""></td></tr>
+            <tr><td>Expiration Date</td><td><input type=text name=CC_EXPIRES
+value=""></td></tr>
+            <tr><td>NAME</td><td><input type=text name=NAME value=""></td></tr>
+            <tr><td>Address</td><td><input type=text name=ADDR1
+value=""></td></tr>
+            <tr><td>Address 2</td><td><input type=text name=ADDR2></td></tr>
+            <tr><td>City</td><td><input type=text name=CITY value=""></td></tr>
+            <tr><td>State</td><td><input type=text name=STATE
+value=""></td></tr>
+            <tr><td>Zipcode</td><td><input type=text name=ZIPCODE
+value=""></td></tr>
+            <tr><td>Phone</td><td><input type=text name=PHONE
+value=""></td></tr>
+            <tr><td>Email</td><td><input type=text name=EMAIL
+value=""></td></tr>
+            <tr><td colspan=2><input type=SUBMIT value="Test it."
+name=SUBMIT></td></tr>
+</table>>
+</form></body></html>
+<!-- HTML ENDS HERE -->
