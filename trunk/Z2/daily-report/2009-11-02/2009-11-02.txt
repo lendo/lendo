@@ -1,5 +1,10 @@
 1.测试Bluepay的ACH。
 
+2.将system setting页面加在communication上面的activity custom data加到下面的contact activity控制里面去。
+
+3.开始做Project-Winter-2009.doc里面的Phase One里面的东西，写一点做法：
+  
+
 
 schedule:
 
