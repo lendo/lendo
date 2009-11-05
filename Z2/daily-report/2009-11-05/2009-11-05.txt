@@ -1,7 +1,8 @@
 1.写一个新都网站的计划书。
  
-2.在4个模块中各添加一个transactionFee的字段，同时得正确计算这个Transaction Fee。
-     在前台和后台都得要有提示。
+2.在shopping_cart表添加一个transactionFee的字段，同时得正确计算这个Transaction Fee。
+     这个Transaction Fee只需要作用在Online Credit Card支付的时候。
+     在前台和后台都得要有提示。（后台已完成，前台还需要publicaccess和constituent）
      今天要将这个Transaction Fee同时加入到报表中。
 
 
@@ -56,5 +57,3 @@ UPDATE `report_output` SET `lookUpId`='474' WHERE (`reportId`='22') and (`lookUp
 14.在涉及donation表的地方，把anonymous这个字段加入到可选列里面，同时在search criteria.
 
 15.The “Product Sales Report” does not reflect the 10% member discount, so the amount is not correct – would you be able to fix that?
-
-16.
