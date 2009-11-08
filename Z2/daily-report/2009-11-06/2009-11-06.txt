@@ -1,7 +1,7 @@
 1.写一个新都网站的计划书。
  
 2.前台public access和constituent完成。
-     将这个Transaction Fee同时加入到报表中。
+   将这个Transaction Fee同时加入到报表中。
      
 3.I spoke with one of our customers who requested donor note. Apparently we can’t save the donor note as the output field after I drag and drop from left to right. The search result doesn’t have donor note listed, neither does the spreadsheet export.
   /admin/v2report/columnSelector/validColumnSelectBody.jsp
