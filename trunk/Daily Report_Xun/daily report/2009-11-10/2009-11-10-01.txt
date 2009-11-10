@@ -1,0 +1,91 @@
+1.应该重视Java开发程序包的版本号。
+
+2.安装JDK时，如果是在Windows环境下，不要接受带空格的默认安装路径，
+  如：c:/ProgramFiles/jdk1.6.0。应该将ProgramFiles删掉。JDK
+  的执行路径即为 D:\Java\jdk1.6.0_16\bin 。
+  
+3.执行路径指操作系统搜索本地可执行文件的目录列表。我的理解为即把可
+  执行文件本地化，由系统直接调用。
+  
+4.如果是在Windows环境下设置执行路径，操作步骤为：我的电脑->右键属性
+  ->高级->环境变量（N）；在"系统变量"窗口中找到变量名Path，双击Path
+  或点击编辑把 D:\Java\jdk1.6.0_16\bin 加进变量值中，用分号隔开。
+  确定完成后，通过"开始"，"运行"，输入"cmd"打开shell窗口，键入：
+  java -version 回车后，检测安装是否成功，能正常显示出Java JDK
+  版本信息即可。
+  
+5.在学习《Java2核心技术 卷1》的时候，安装好了JDK，还要把源代码库src.zip、
+  文档doc、和本书示例程序corejava.zip 安装好。因为需要经常查看Java源
+  文件，会频繁地使用类库文档，它包含了Java类库中公共部分的源代码，通过深入
+  研究，可以理解类库函数的功能和怎么实现的。docs中包含了HTML格式的类库文档，
+  可以使用任何浏览器查看。按照书上的要求，我在浏览器中收藏了docs目录中的
+  index.html索引。
+  
+6.NetBeans是Sun公司开发的Java集成开发环境，发展速度比较快。Eclipse是
+  IBM公司开发的Java集成环境，《Java2核心技术 卷1》还是偏重介绍Eclipse，
+  因为Eclipse的用法要灵活些。按照书上所说，目前还是重点了解如何使用JDK
+  工具编写程序，之后再用Eclipse集成开发环境，这样上手更快，背后的工作细节
+  理解得也要透彻些。
+  
+7.javac程序是一个Java编译器，将文件 *.java 编译成 *.class ，并发送到
+  Java虚拟机JVM，虚拟机执行编译器编译后存放在class文件中的字节码。
+  
+8.书中讲到的几个注意点：
+   8.1 用记事本Notepad写代码的时候，要注意大小写。尤其是类名，第一个字母
+        大写，为名词；如Welcome，不是welcome祸WELCOME。
+   8.2 用javac编译时要提供文件名如Welcome.java，用java命令运行时就指定
+        类名如Welcome，不带扩展名 .java 或 .class 。
+   8.3 如果在shell窗口下编译运行后，出现"Bad command or file name"或
+       "javac:command not found"这类消息，检查安装JDK后的Path是否指对
+        了路径。
+   8.4 用javac命令编译后如果报错为："cannot read:Welcome.java"，就检查
+        该程序文件是否在当前目录。
+   8.5 用java命令运行后报错为："java.lang.NoClassDefFoundError"，就要
+        检查类名是否输错。Java是区分大小写的。
+   8.6 如果收到有Welcome/java的错误信息，就是java命令用法不对，不该带文件
+        全名，应该是类名。如 java Welcome 。
+   8.7 如果错误信息指的是新语言结构问题，就要看当前JDK版本是否在Java SE 5.0
+        之上。（目前我电脑上装的是Java SE 6 ，不存在这个问题）
+   8.8 如果错误太多看不全，可以使用命令 2> 将错误发到另一个文件中。
+        如使用命令：javac Welcome.java 2> error.txt 。
+        
+9.可以利用JDK自带的applet查看器加载applet，即是appletviewer程序，它是JDK
+  的一个特殊工具，可快速测试applet。但使用这个程序命令时，提供的文件为HTML文件，
+  编译运行的方式如： javac WelcomeApplet.java
+                  appletviewer WelcomeApplet.html
+                  
+10.HTML文件的HTML语言源文件可以把文件用记事本打开，或在文件上右键点"编辑"。
+   或者在浏览器中查看源文件。在HTML网页中按照HTML语法加入appletviewer和applet
+   存放代码的类文件，可以通过appletviewer加载applet。appletviewer会忽略
+   HTML语言标记，直接加载相应applet。但书中提到，浏览器的情况可能不会那么单纯，
+   可能会有特殊情况。
+   
+11.appletviewer仅是单独用来测试applet。需要将applet放到浏览器中，才能与
+   Internet进行交互。
+   
+12.J2SE是一个Java开发平台大的分类。
+   Java分为J2SE，J2EE，J2ME，他们的程序开发都必须要有JDK。
+   JDK是开发任何JAVA程序的时候，程序员必须要有的环境。
+    我的理解这3大类使用到的JDK包含的开发工具不同，类库不同，对于
+   SE，包含的就是标准的公共类库；EE，包含了更多针对企业开发所
+    要用到的类库；ME，类库量变少，开发所用的类文件更小。
+  
+  J2SE是没有版本号的，它是一个分类的术语，版本号只针对JDK而言。
+  
+  Java程序员编写的软件需要通过Java平台来编译和运行。
+  二者软件和平台是相互配合的关系。缺一不可。
+  比如，你写的HelloWorld.java。
+  HelloWorld.java就是程序员编写的软件。
+  javac,java命令就是由Java平台即JDK提供的开发环境提供的。
+  
+-------------------------------------------------- Schedule ------------------------------------------------
+1.（Q1）CLASSPATH 环境变量有什么用？我没设置，另外 JAVA_HOME 我也没设置。
+       只设置了系统变量 PATH 指向的JDK路径。没设置这两个JDK编译运行也能完成，
+       会不会有什么影响？
+       
+2.（Q1）第2章讲到了有关编译和运行Java程序的机制。
+        我的的理解是编译和运行Java程序都首先要在操作系统上设置Java运行的环境
+        变量。编译和运行Java程序都是在安装了JDK开发包，通过JDK中的Java虚拟机
+       JVM上操作，由JVM把编译后的字节码解释成机器码执行。得到最终运行成果。
+        丹哥看看我这点对第2章讲到的机制理解得正不正确？
+
