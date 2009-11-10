@@ -8,7 +8,7 @@ a, 要跟着一本教材走，去书城买几本成系统的教材来学。同�
 
 b, 学英语要多看英语电影，有上下文，更容易记单词。
 
--2.写一个新都网站的计划书。
+-2.写一个新都网站的计划书。http://www.scjinge.com
 
 -1.I cannot find a report that will show the “Transaction Tender”
    I can search by it, but not choose it as a field on the transaction report.  This one I think will be important.
