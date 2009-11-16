@@ -1,0 +1,59 @@
+1。今天必须要把package的po和vo定义好。
+
+2。差LILY6.5元。
+
+2。When we create an email audience, do we keep the logic to auto-filter out those accounts that are marked "deceased"?
+
+schedule:
+
+a, 要跟着一本教材走，去书城买几本成系统的教材来学。同时也可以系统学习新概念英语。
+
+b, 学英语要多看英语电影，有上下文，更容易记单词。
+
+-2.写一个新都网站的计划书。http://www.scjinge.com
+
+-1.I cannot find a report that will show the “Transaction Tender”
+   I can search by it, but not choose it as a field on the transaction report.  This one I think will be important.
+
+1, Could you please take a look at this against your local ms database? Let me know how it goes and why the other event doesn’t have the ticket price information listed.
+   （这个问题在测试的时候，需要连接到本地的ms数据库才能进行测试）
+2, I’m not seeing Additional Contact as an available result column anywhere either
+ 
+4, Add Event and Activity search tab to Mailing, Primary Contact and Stats Search
+
+5, Is there a summary view of our saved reports where I can quickly view who created the report and when without clicking on each individual report (like there was previously)?  
+
+6, Would it be possible to add the PDF option back into the reports tab.
+
+8, Since the Deceased, No Email and No Solicitation qualifiers are in the first Group now instead of as Query Filters, does that mean that any groups that get added are not going to exclude Deceased, No Email and No Solicitation accounts? In other words, if someone doing a search adds a group, are they going to have to add those filters to each group they add?
+
+9, For some reason, if you click the calendar and select a date for Donation Date on the search criteria page, the date pops up under Expected Date instead. This happened to me and Tim Waggoner. I think we were both running Donor Reports.
+
+10,看JIRA上的BUG.
+
+11,How hard is it to make campaign name available to the transaction report? Can you take a look the code and let me know?
+
+12.Could you please take a look at this against your local ms database? Let me know how it goes and why the other event doesn’t have the ticket price information listed.
+INSERT INTO `report_output_lookup` VALUES ('475', '236', 'event_ticket_package', 'concat_ws(\'<hr/>\',event_ticket_package.name,group_concat(etp.name separator \'<hr/>\'))', '1', null, 'Ticket Name', 'ticketName', 'Ticket Name', '1', null, null, null, '3', '0', null, '10', '0');
+INSERT INTO `report_output_lookup` VALUES ('474', '236', 'event_ticket_package', 'concat_ws(\'<hr/>\',cast(event_ticket_package.fee as char),group_concat(cast(etp.fee as char) separator \'<hr/>\'))', '1', null, 'Ticket Price', 'ticketPrice', 'Ticket Price', '1', null, null, '#,###,###.00', '3', '0', null, '10', '0');
+
+UPDATE `report_output_map` SET `lookupGroupId`='236' WHERE (`reportId`='52') and (`lookupGroupId`='136');
+
+
+这22是变化的，在其他数据库，这个ID不一定是22.
+UPDATE `report_output_system` SET `lookUpId`='475' WHERE (`reportId`='22') and (`lookUpId`='469');
+UPDATE `report_output_system` SET `lookUpId`='474' WHERE (`reportId`='22') and (`lookUpId`='470');
+
+UPDATE `report_output_custom` SET `lookUpId`='475' WHERE (`reportId`='22') and (`lookUpId`='469');
+UPDATE `report_output_custom` SET `lookUpId`='474' WHERE (`reportId`='22') and (`lookUpId`='470');
+
+
+UPDATE `report_output` SET `lookUpId`='475' WHERE (`reportId`='22') and (`lookUpId`='469');
+UPDATE `report_output` SET `lookUpId`='474' WHERE (`reportId`='22') and (`lookUpId`='470');
+修改很麻烦，看能不能找到折中的方案。
+
+13.在Transaction Report中加入Transaction Tender。
+
+14.在涉及donation表的地方，把anonymous这个字段加入到可选列里面，同时在search criteria.
+
+15.The “Product Sales Report” does not reflect the 10% member discount, so the amount is not correct – would you be able to fix that?
