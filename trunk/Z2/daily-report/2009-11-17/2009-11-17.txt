@@ -1,6 +1,8 @@
 
 1。Transaction Fees，今天让Lily开始测试，注意关注BUG。
 
+2。Transaction Fee的Recurring Donation中，下一次的自动Donation不能扣手续费。
+
 2。提交做的部分代码，让XiuGuo开始做前台。
 
 schedule:
