@@ -1,0 +1,60 @@
+1.public class ValueInvoke{
+    
+    public static void main(String s[]){
+        String value2 = "10";
+	String b = changeValue(value2);
+        System.out.println(b);
+    }
+
+    private static String changeValue(String value2){
+        String returnValue = null;
+
+        returnValue = "20" + value2;
+
+	return returnValue;
+    }
+ }
+ 如果要用一个方法，通过传递变量来改变这个变量的值的话，在定义这个方法的
+ 时候，最好再定义一个新变量，如changeValue方法中的变量returnValue，
+ 通过新变量的改变，返回新变量的值。
+ 
+2.用static标记的语句或方法是属于一个类的，不属于某个对象。如果多个对象
+  被初始化，那么这些对象都会被赋予实例域给的状态，而static标记后，对象
+  就不仅会有实例域给的状态，还会有static的状态。而且static标记后，用
+  static声明的变量不会随着对象的改变而改变。
+  
+3.用this关键字可以在已经定义了另外一个构造器时，调用这个构造器。这样以免
+  构造器中的对象重复定义。
+  如：  public People(Integer age,String name,String idCard,String id){
+        this(age,name,idCard);
+        this.id = id;
+       }
+       
+4.用equals方法比较字符串时，最好变量放在equals后面，输入的字符放在equals
+  前面。这样避免如果变量为空时，不能进行比较，造成指针错误。
+  如：String aa = null;
+        if(aa!=null){
+            aa.toString();
+        }
+
+        if("A".equals(aa))
+        ....
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+  
+
+  
