@@ -1,0 +1,32 @@
+1.在Java中可以使用类ArrayList确定和改变数组的大小。
+  add方法可以将元素添加到数组列表中。如：staff.add(new Employee("Harry Hacker"));
+  如果调用add且内部数组已经满了，数组列表就将自动创建一个更大的数组，
+  并将所有对象从较小的数组拷贝到较大的数组中。
+  如果能够估计出数组中可能存储的元素数量，就可以用ensureCapacity方法确定分配。
+  如：staff.ensureCapacity(100);
+  这样调用之后，那么数组就有100个存储空间可以使用，如果要添加就用add方法。
+  但如果这样：new Employee[100];
+  那么就固定了100个容量，并且100个数组都分配了内存空间。
+  如果确认了数组列表元素数量，就可以调用trimToSize方法固定数量，多余的存储空间
+  垃圾回收器将会回收。
+  一般在确定不会添加任何元素时，再调用trimToSize。
+  声明和构造一个保存对象的数组列表格式为：
+  ArrayList<Employee> staff = new ArrayList<Employee>();
+  
+2.对于ArrayList类，使用get和set方法访问或改变数组元素操作。
+  如：staff.set(i,harry); 等价于 a[i]=harry ;
+     Employee e = staff.get(i); 等价于 Employee e = a[i];
+     
+
+ -------------------------------------------------- Schedule ------------------------------------------------     
+1.（Q1）丹哥，书上详细讲了equals方法的具体实现，我目前理解就是比较两个对象或字符串是否相等。
+        上次丹哥讲了在用equals方法时，最好在前面加一个条件判断变量是否为null。
+        如：
+        String aa = null;
+        if(aa!=null){
+            aa.toString();
+        } 
+        if("A".equals(aa))
+        ....
+        我想知道equals方法在使用时还应该注意什么，除了上面丹哥讲的这点。
+        这个地方书上讲得很细，我有点把握不住重点。
