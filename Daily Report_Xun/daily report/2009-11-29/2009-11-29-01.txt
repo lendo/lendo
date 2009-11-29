@@ -1,0 +1,78 @@
+1.在Java SE 5.0中，可以使用"for each"循环对数组列表遍历。
+  如： for(Employee e : staff)
+      do something with e ...
+  这个循环和下列代码具有相同效果：
+      for(int i = 0;i < staff.size();i++)
+      {
+          Employee e = staff.get(i);
+          do something with e ...      
+      }
+  p174中用ArrayList对第4章中的EmployeeTest做出了修改：
+  修改了下面几点：
+  （1）不必指出数组的大小。
+  （2）使用 add 将任意多的元素添加到数组中。
+  （3）使用 size() 替代 length 计算元素的数目。
+  （4）使用 a.get(i) 替代 a[i] 访问元素。
+  以下是修改的部分：
+      public static void main(String[] args)
+      {
+          //fill the staff array list with three Employee objects
+          ArrayList<Employee> staff = new ArrayList<Employee>();
+          
+          //往数组列表添加对象
+          staff.add(new Employee("Carl Cracker",75000,1987,12,15));
+          staff.add(new Employee("Harry Hacker",50000,1989,10,1));
+          staff.add(new Employee("Tony Tester",40000,1990,3,15));
+          
+          //raise everyone's salary by 5%
+          for (Employee e : staff)
+              e.raiseSalary(5);
+              
+          //print out information about all Employee objects
+          for (Employee e : staff)
+              System.out.println("name=" + e.getName() + ",salary=" + e.getSalary() + "hireDay=" + e.getHireDay);
+      }
+      
+2.所有的基本类型都有一个与之对应的类。
+  通常，这些类称为包装器（wrapper）。
+  这些对象包装器类拥有很鲜明的名字：
+  Integer、Long、Float、Double、Short、Byte、Character、Void 和 Boolean
+  前6个数值类型派生于公共的超类 Number 。
+  对象包装器类都声明为 final ，因此不能定义它们的子类。
+  
+  对于在用 ArrayList 类定义变量时，尖括号中的参数类型不允许是基本类型。
+  不允许写成 ArrayList<int>。这里要用到Integer对象包装器类。
+  可以这样声明：ArrayList<Integer> list = new ArrayList<Integer>();
+  
+  比较两个数值是否相等，如果是使用包装器类定义的变量，则不能用 == 操作符进行比较。
+  因为 == 只是检测是否指向同一个内存位置。
+  这时，应该调用equals方法来比较。
+  
+  如果要编写一个修改数值参数值的方法：
+  比如在第4章方法参数这节讲到的这种情况：
+      public static void tripleValue(double x) //doesn't work
+      {
+          x = 3*x;
+      }
+  这种方式就不行，而需要使用在 org.omg.CORBA 包中定义的持有者（holder）类型，包括有 IntHolder、BooleanHolder等。
+  对于上述这种情况应该这样实现：
+      public static void triple(IntHolder x)
+      {
+          x.value = 3*x.value;
+      }
+      
+
+
+ -------------------------------------------------- Schedule ------------------------------------------------     
+1.（Q1）丹哥，书上详细讲了equals方法的具体实现，我目前理解就是比较两个对象或字符串是否相等。
+        上次丹哥讲了在用equals方法时，最好在前面加一个条件判断变量是否为null。
+        如：
+        String aa = null;
+        if(aa!=null){
+            aa.toString();
+        } 
+        if("A".equals(aa))
+        ....
+        我想知道equals方法在使用时还应该注意什么，除了上面丹哥讲的这点。
+        这个地方书上讲得很细，我有点把握不住重点。      
+      
