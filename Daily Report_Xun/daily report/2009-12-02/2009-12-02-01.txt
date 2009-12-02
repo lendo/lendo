@@ -1,0 +1,75 @@
+1.获得Class类对象有3种方法：
+ （1）Object类中的getClass()方法将会返回一个Class类型的实例。
+  例如:  Employee e;
+        ...
+        Class cl = e.getClass();
+  (2)还可以调用静态方法forName获得类名对应的Class对象。
+  例如： String className = "java.util.Date";
+        Class cl = Class.forName(className);
+      如果类名保存在字符串中，并可在运行中改变，就可以使用这个方法。
+      无论何时使用这个方法，都应该提供一个异常处理器（exception handler）。
+  (3)如果T是任意的Java类型，T.class将代表匹配的类对象。
+  例如： Class cl1 = Date.class; //if you import java.util.*;
+       Class cl2 = int.class;
+       Class cl3 = Double[].class
+      请注意，一个Class对象实际上表示的是一个类型，而这个类型未必
+      一定是一种类。例如，int不是类，但int.class是一个Class类型
+      的对象。 
+      
+2.当程序运行过程中发生错误时，就会“抛出异常”。抛出异常比终止程序要
+  灵活得多，这是因为可以提供一个“捕获”异常的处理器（handler）对异常
+  情况进行处理。
+  异常有两种类型：未检查异常和已检查异常。
+  对于已检查异常，编译器将会检查是否提供了处理器。
+  但例如，访问null引用，都属于未检查异常。
+  应该精心地编写代码来避免这些错误的发生，而不要将精力花在编写异常
+  处理器上。
+  如果竭尽全力还是发生了异常，编译器就要求提供一个处理器。
+  下面是一个实现最简单的处理器的例子：
+  将可能抛出已检查异常的一个或多个方法调用代码放在try块中，然后在catch子句
+  中提供处理器代码。
+  简单处理器模式：    try{
+                      statements that might throw exceptions
+                  }
+                  catch(Exception e){
+                      handler action
+                  }
+                  
+  示例：
+                  try{
+                      String name = ...; //get class name
+                      Class cl = Class.forName(name); //might throw exception
+                      ... //do something with cl
+                  }
+                  catch(Exception e){
+                      e.printStackTrace();
+                  }
+  如果类名不存在，则将跳过try块中的剩余代码，程序直接进入catch子句（这里，利用
+  Throwable类的printStackTrace方法打印出栈的轨迹。Throwable是Exception
+  类的超类）如果try块中没有抛出任何异常，那么会跳过catch子句的处理器代码。
+  
+      
+      
+      
+---------------------------------------------------- Schedule ------------------------------------------------     
+1.（Q1）丹哥，书上详细讲了equals方法的具体实现，我目前理解就是比较两个对象或字符串是否相等。
+        上次丹哥讲了在用equals方法时，最好在前面加一个条件判断变量是否为null。
+        如：
+        String aa = null;
+        if(aa!=null){
+            aa.toString();
+        } 
+        if("A".equals(aa))
+        ....
+        我想知道equals方法在使用时还应该注意什么，除了上面丹哥讲的这点。
+        这个地方书上讲得很细，我有点把握不住重点。      
+        
+2.（Q1）丹哥，反射这节我有些看不太懂，对上面的反射机制描述不是很清楚。
+        具体反射是用在什么地方，在那种情况下运行这种功能，也有些模糊。
+        可能我现在看得不多，我还应该继续往下看。
+        但我认为这个地方有点难理解，希望丹哥帮助下。  
+        
+   （Q2）对于我第1点总结的第2种方法后面的说明：
+         如果类名保存在字符串中，并可在运行中改变，就可以使用这个方法。
+         对这句话的并可在运行中改变不是很清楚，
+         不知道是改变什么，怎么改变。
