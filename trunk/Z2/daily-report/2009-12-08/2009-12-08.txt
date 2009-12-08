@@ -1,5 +1,6 @@
 1.讨论权限系统框架，暂定Facade和Action以AOP的模式进行控制，需要测试一下Struts在AOP环境下的运行状态。
 2.从Account Home进入系统，Active Member的查询的分组Group不太对，会出来两个或关系的Group，需要确认。
-3.等待张总Dump客户数据库，然后修改数据库的Gateway设置，验证Active Member的总数的问题。
+3.等待张总Dump客户数据库，然后修改数据库的Gateway设置，验证Active Member的总数的问题，Share Documents。
 4.给爸爸做一个简单的户籍管理系统。
 5.验证Struts的Action在Spring里面的运行。
+6.给刘俊杰做JMS的问题做Topic的测试代码，做数据导入的进度测试。
