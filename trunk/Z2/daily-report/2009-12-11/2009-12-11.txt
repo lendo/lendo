@@ -1,0 +1,2 @@
+1.I'll focus on this assignment right after I'm done with security functions. 注意"right after"加重语气，一做完啥就做啥。
+2.Check original source code snippet about Security Module.
