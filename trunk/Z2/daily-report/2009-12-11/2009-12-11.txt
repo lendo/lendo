@@ -1,3 +1,11 @@
 1.I'll focus on this assignment right after I'm done with security functions. 注意"right after"加重语气，一做完啥就做啥。
 2.Check original source code snippet about Security Module.
 3.Start to work on business logics of security module next week.
+
+
+
+
+----------------------------------------Scheduled Tasks----------------------------------------
+1.给爸爸做一个简单的户籍管理系统。
+2.给刘俊杰做JMS的问题做Topic的测试代码，做数据导入的进度测试。
+3.Transaction Fee算出来的最后的值需要格式化为2位的浮点型。
