@@ -1,0 +1,42 @@
+1.接口这种技术主要用来描述类具有什么功能，而并不给出每个功能的
+  具体实现。
+
+2.接口的声明用关键字 interface
+  如这样声明一个接口：
+  public interface Comparable{
+      int compareTo(Object other);
+  }
+  接口中声明的方法自动地属于public。
+  所以不必提供关键字public。
+  在声明一个接口时，接口中不能含有实例域，
+  也不能实现方法。这种任务应该由实现接口
+  的那个类来完成。
+  
+3.如果某个类要实现接口，需要使用关键字 implements
+  比如这个类应该这样声明：
+  class Employee implements Comparable
+  这样一个类声明了接口以后，应该在其中提供方法实现。
+  比如：
+  public int compareTo(Object otherObject){
+      Employee other = (Employee)otherObject;
+      if(salary < other.salary) return -1;
+      if(salary > other.salary) return 1;
+      return 0;
+  }
+  在实现接口的方法时，就应注意将方法声明为public。
+  
+---------------------------------------------------- Schedule ------------------------------------------------   
+1.（Q1）丹哥，我对于下面这种形式的类还不是很理解，
+        比如：Comparable<Employee>,Comparable<Manager>,
+        它为什么要用这种形式表现类呢？有什么区别吗？
+        这种形式来表现类一般用在什么地方呢？是用来说明吗？
+        还是在写代码的时候有这种必要？我不是很清楚。
+        我记得在第5章讲到了这点，希望丹哥说说，我再反回去
+        理解一下。
+        
+        
+        
+        
+        
+        
+        
