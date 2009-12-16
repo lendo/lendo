@@ -1,0 +1,65 @@
+1.接口不是类，不能使用new运算符实例化一个接口：
+  比如：
+  x = new Comparable(...); // ERROR
+  可以声明接口变量，
+  但必须引用实现了接口的类对象：
+  比如：
+  Comparable x = new Employee(...);
+  
+2.每个类只能够拥有一个超类，但却可以实现多个接口。
+  而抽象类只能被扩展一次。
+  这是接口与抽象类的一点区别。
+  
+3.变量的拷贝引用的是同一个对象。
+  当一个变量发生改变，对象也会改变，所以另一个变量跟着改变。
+  而变量的克隆，是引用两个相同的对象。
+  当改变克隆对象的状态，不会影响原始对象的状态。
+
+4.默认的克隆操作是浅拷贝，
+  这种方式最好的情况是实例域为不可变。
+  如果实例域存在可变变量，
+  就需要对克隆操作实现深拷贝。
+  
+5.如果需要实现克隆操作，最好声明实现Cloneable接口。
+  对于默认浅拷贝的实现例如下：
+  class Employee implements Cloneable{
+      //raise visibility level to public,change return type
+      public Employee clone() throws CloneNotSupporteException{
+          return (Employee)super.clone();
+      }
+  }
+  
+  下面是一个建立深拷贝clone方法的一个示例：
+  class Employee implements Cloneable{
+      public Employee clone() throws CloneNotSupportedException{
+          //call Object.clone()
+          Employee cloned = (Employee)super.clone();
+          
+          //clone mutable fields
+          cloned.hireDay = (Date)hireDay.clone();
+          
+          return cloned;
+      }
+  }
+  
+6.虽然如 Employee 和 Date 类都实现了Cloneable接口，
+  因此不会出现异常。
+  但是编译器并不知道这些情况，
+  因此需要用 throws CloneNotSupportedException 声明异常。
+  
+  
+---------------------------------------------------- Schedule ------------------------------------------------   
+1.（Q1）丹哥，我对于下面这种形式的类还不是很理解，
+        比如：Comparable<Employee>,Comparable<Manager>,
+        它为什么要用这种形式表现类呢？有什么区别吗？
+        这种形式来表现类一般用在什么地方呢？是用来说明吗？
+        还是在写代码的时候有这种必要？我不是很清楚。
+        我记得在第5章讲到了这点，希望丹哥说说，我再反回去
+        理解一下。
+        
+        
+        
+        
+        
+        
+        
