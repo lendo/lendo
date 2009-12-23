@@ -1,0 +1,749 @@
+.tab {
+
+	padding: 5px 10px;
+
+	border: 1px solid #bcbcbc;
+
+	background: #f9f9f9;
+	
+	height: 30px;
+
+	border-bottom-width:0px;
+
+}
+
+
+.leftTab {
+
+    border-width: 1 1 0 1;
+
+
+}
+
+
+
+.rightTab {
+
+    border-width: 1 1 0 0;
+
+
+}
+
+
+
+.activeTab {
+
+    background:#6395C6;
+
+    color:white;
+
+
+    border-width: 0;
+
+    a.link:white;
+
+
+   padding: 5px 10px;
+
+
+	border: 1px solid #6395C6;
+
+
+	height: 30px;
+
+
+	border-bottom-width:0px;
+
+
+}
+
+.activeTab1 {
+ color: red;
+
+
+ TEXT-DECORATION: none;
+
+}
+
+.activeTab a:link {
+
+    color:white;
+
+
+    TEXT-DECORATION: none;
+
+}
+
+
+
+
+.activeTab A:hover {
+
+	COLOR: white;TEXT-DECORATION: none
+
+}
+
+
+
+
+.activeTab A:active {
+
+	COLOR: white;TEXT-DECORATION: none
+	
+}
+
+
+
+.activeTab A:visited {
+
+
+	COLOR: white;TEXT-DECORATION: none
+
+
+}
+
+
+
+
+.tabBox {
+
+    border:1px solid #6395C6;
+
+    border-top-width:3px;
+
+    width:100%;
+
+    height:100%;
+
+    padding:5px;
+
+    vertical-align:top;
+
+}
+
+
+
+.datatable A {
+
+    text-decoration:underline !important;
+
+}
+
+
+
+
+.noTab {
+    border-width: 1 1 0 1;
+
+    width:100%;
+
+    height:100%;
+
+    vertical-align:top;
+
+}
+
+
+.activeTab_1 {
+
+    background:#A4A4A4;
+
+    color:#ffffff;
+
+   padding: 5px 5px;
+
+	border: 1px solid #bcbcbc;
+
+	height: 30px;
+
+}
+
+.tabBox_1 {
+
+    border:1px solid #A4A4A4;
+
+    border-top-width:3px;
+
+    width:100%;
+
+    height:100%;
+
+   padding:5px;
+
+    vertical-align:top;
+
+}
+
+.tree {
+	width:200px;
+	padding: 5px 5px;
+	height:100%;
+	text-align:left;
+	vertical-align:top;
+	border: 1px solid #666666;
+}
+/*20060517heyhadd*/
+.bodycontent {
+	height:100%;
+	text-align:left;
+	vertical-align:top;
+}
+/*20060517heyhadd end*/
+
+.table3{
+	border: 1px solid #666666;
+	width:195px;
+	padding: 5px 5px;
+	height:100%;
+}
+
+
+
+.td1{
+	text-align:right;
+	background:#f3f3f3;
+	width: 15%;
+}
+
+
+
+.td3{
+	text-align:left;
+	background:#F3F3F3;
+	width: 16%;
+}
+
+
+
+.td6{
+	text-align:left;
+	background:#f3f3f3;
+	width: 35%;
+}
+
+
+
+
+.td5{
+	text-align:center;
+	background:#F3F3F3;
+	width: 16%;
+}
+
+
+
+.td4{
+	text-align:left;
+	background:#F3F3F3;
+	width: 17%;
+	height: 20px;
+}
+
+
+.tdp{
+	text-align:left;
+	background: #EDECFF;
+     width: 18%;
+
+}
+
+
+.tdy{
+	text-align:left;
+	background: #FFFFB2; 
+    width: 18%;
+}
+
+
+
+.tdy2{
+	text-align:left;
+	
+	background: #FFFFB2; 
+	
+	height: 20px;
+	
+    width: 30%;
+}
+
+
+.tdb{
+
+	text-align:left;
+
+
+	background: #F7F7FF; 
+
+    width: 18%;
+
+
+
+}
+
+
+
+.tdg{
+
+
+	text-align:left;
+
+	background: #DFFFFF; 
+    width: 18%;
+
+
+}
+
+
+.tdp1{
+
+
+	background: #EDECFF; 
+
+
+}
+
+
+.tdy2{
+
+
+	background: #FFFFB0;
+
+}
+
+
+.tdw{
+
+
+text-align:left;
+
+	height: 20px;
+
+
+	width: 120px;
+
+
+}	
+
+
+.tdw1{
+
+text-align:left;
+
+	height: 20px;
+
+	width: 30px;
+
+
+}	
+
+
+.tdw2{
+
+
+text-align:left;
+
+	height: 20px;
+
+
+	width: 150px;
+
+
+}	
+
+
+
+
+
+
+
+.td2{
+
+
+
+
+	width: 50%;
+	height: 25px;
+
+	text-align:right;
+
+	text-valign:top;
+
+
+
+}
+
+.tdopinion1{
+
+text-align:left;
+
+	width: 100px;
+
+}
+
+.tdopinion2{
+
+text-align:left;
+
+	width: 500px;
+
+}	
+
+
+
+.left{
+	text-align:left;
+
+	padding: 1px 5px;
+
+}
+
+
+
+.center{
+
+	text-align:center;
+
+}
+
+
+
+.right{
+
+	text-align:right;
+
+	padding: 1px 5px;
+
+
+}
+
+
+
+
+.header1{
+
+	width: 100%;
+
+	height: 25px;
+
+	vertical-align:top;
+
+}
+
+
+.header12{
+
+	background: #F3F3F3;
+
+
+	height: 20px;
+
+
+	vertical-align:center;
+
+	font: 400;
+
+	background-color: #BBB1F6;
+
+}
+
+
+.body1{
+	width: 100%;
+
+	height: 30px;
+
+
+}
+
+
+
+.menuleft {
+
+	width:15%;
+
+	padding: 5px 15px;
+
+	height:25px;
+
+	text-align:left;
+
+	background-image: url(../images/menu_bg.gif);
+
+
+}
+
+.menuright {
+
+	width:85%;
+
+	height:25px;
+
+	text-align:left;
+
+	background-image: url(../images/menu_bg.gif);
+
+}
+
+
+
+.message {
+
+	width:100%;
+
+	height:20px;
+
+	text-align:left;
+
+	vertical-align:center;
+	background:#6392c6;
+
+}
+
+
+
+.message1{
+	width: 100%;
+
+	height: 5px;
+}
+
+
+
+.content {	
+	padding: 5px 5px;
+
+	height:100%;
+
+	text-align:left;
+
+	vertical-align:top;
+
+}
+
+
+
+
+.navigation{
+
+	width: 100%;
+
+	height: 100%;
+
+	vertical-align:top;
+
+}
+
+
+
+.tabBox2 {
+    border:1px solid #6395C6;
+
+    border-top-width:3px;
+
+    width:100%;
+
+    padding:5px;
+    vertical-align:top;
+
+
+}
+
+
+
+
+
+.height105{
+	height: 105px;
+	text-align:center;
+
+}
+
+
+
+.height80{
+
+	height: 80px;
+}
+
+
+.height50{
+
+	height: 50px;
+}
+
+
+
+
+
+
+
+.height389{
+
+	width: 140px;
+	height: 100%;
+
+}
+
+
+.height140{
+	height: 140px;
+	vertical-align:top;
+	vertical-align:center;
+
+}
+
+.width242{
+	width: 242px;
+}
+
+.logonbackimage1 {
+	width:100%;
+	height: 35px;
+	background-image: url(../images/login_01.gif);
+
+}
+
+
+.logonbackimage2 {
+
+	height: 50%;
+
+	background-image: url(../images/login_02.gif);
+
+}
+
+
+.logonbackimage3 {
+
+	width:100%;
+
+	height: 100%;
+
+	background-image: url(../images/login_04.jpg);
+
+}
+
+.logotable {
+
+	width:100%;
+	height: 100%;
+
+}
+.td50{
+   vertical-align:top;
+
+	width:50%;
+
+}
+/*ouwx*/
+.white{color:#FFFFFF}
+
+.pageLayout {
+    width:100%;
+    height:100%;
+}
+
+.pageHeader {
+    width:100%;
+    height:73px;
+    vertical-align:top;
+}
+
+.pageBody {
+    width:100%;
+	height:100%;
+	vertical-align:top;
+	PADDING-TOP: 7px;
+	PADDING-LEFT: 7px;
+}
+
+.pageFooter {
+    width:100%;
+    height:10px;
+}
+/*heyh20060410*/
+.paginator {
+	font-family : verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.scroller {
+    padding-left:20px;
+}
+/**duyang*/
+.td0 {
+	text-align: center;
+	font-weight: bold;
+	background: #f3f3f3;
+}
+.td01 {
+	text-align: left;
+	font-weight: bold;
+	background: #f3f3f3;
+}
+.td03{
+	
+  font-size: 12px;
+background-image: url(../images/header.gif);
+border-color:#698cc3;
+
+}
+.td04{
+ font-size: 12px;
+border-color:#698cc3;
+
+}
+.td05{
+ font-size: 12px;
+border-color:#698cc3;
+background: #ADCEFF;
+}
+.tab01{
+font-size :12px;
+
+}
+.dojoTabPaneWrapper {
+	
+	  padding : 10px 10px 10px 10px;
+}
+.aligncenter{
+	text-align: center;
+
+}
+.alignleft{
+text-align: left;
+}
+.alignright{
+text-align: right;
+}
+
+/**fujin 20061129*/
+.tdtitle {
+	text-align: center;
+	font-weight: bold;
+	background: #f3f3f3;
+	height:25px;
+}
+.tddata {
+	text-align: left;
+	height:20px;
+}
+
+.ttableheader{
+	background: #f3f3f3;
+	height:25px;
+}
+
+
+/**chenghaoyu 20070111*/
+.tdc15{
+	text-align:center;
+	width: 12%;
+}
+.tdc30{
+	text-align:center;
+	width: 28%;
+}
+.tdc45{
+	text-align:left;
+	width: 60%;
+}

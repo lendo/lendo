@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/menu.do" location="50,50" dimension="208,84" />
+  <StrutsActivity path="/menu.jsp" location="350,50" dimension="94,48" />
+  <StrutsActivity path="" location="950,50" dimension="40,48" />
+  <StrutsActivity path="/page/yndemo/editPerson.jsp" location="350,150" dimension="202,48" />
+  <StrutsActivity path="/page/yndemo/listPerson.jsp" location="50,250" dimension="202,48" />
+  <StrutsActivity path="/listPerson.do" location="950,150" dimension="250,84" />
+  <StrutsActivity path="/editPerson.do" location="350,250" dimension="250,84" />
+  <StrutsActivity path="/savePerson.do" location="50,350" dimension="250,84" />
+  <StrutsActivity path="/deletePerson.do" location="650,250" dimension="250,84" />
+  <StrutsActivity path="/searchMajor.do" location="950,350" dimension="262,84" />
+  <StrutsActivity path="/page/yndemo/searchMajor.jsp" />
+  <StrutsTransition id="/page/yndemo/editPerson.jsp,null,/census/savePerson.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="481,198" />
+      <AbsolutePoint location="481,213" />
+      <AbsolutePoint location="950,213" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/page/yndemo/editPerson.jsp,null,/deletePerson.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="552,183" />
+      <AbsolutePoint location="745,183" />
+      <AbsolutePoint location="745,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deletePerson.do,success,/listPerson.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="775,250" />
+      <AbsolutePoint location="775,183" />
+      <AbsolutePoint location="950,183" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/census/savePerson.do,success,/page/yndemo/editPerson.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,213" />
+      <AbsolutePoint location="451,213" />
+      <AbsolutePoint location="451,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/census/savePerson.do,success,/page/yndemo/listPerson.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1075,234" />
+      <AbsolutePoint location="1075,409" />
+      <AbsolutePoint location="151,409" />
+      <AbsolutePoint location="151,298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/census/listPerson.do,success,/page/yndemo/listPerson.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,274" />
+      <AbsolutePoint location="252,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchMajor.do,success,/page/yndemo/searchMajor.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1081,392" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/menu.do,success,/menu.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="258,74" />
+      <AbsolutePoint location="350,74" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/savePerson.do,success,/page/yndemo/listPerson.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="300,392" />
+      <AbsolutePoint location="751,392" />
+      <AbsolutePoint location="751,322" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchMajor.do,success,/listPerson.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1075,350" />
+      <AbsolutePoint location="1075,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/savePerson.do,success,/listPerson.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="300,392" />
+      <AbsolutePoint location="615,392" />
+      <AbsolutePoint location="615,153" />
+      <AbsolutePoint location="950,153" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/page/yndemo/editPerson.jsp,null,/savePerson.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,174" />
+      <AbsolutePoint location="273,174" />
+      <AbsolutePoint location="273,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/census/listPerson.do,success,/page/yndemo/editPerson.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="451,250" />
+      <AbsolutePoint location="451,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/page/yndemo/editPerson.jsp,null,/census/editPerson.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="459,150" />
+      <AbsolutePoint location="459,80" />
+      <AbsolutePoint location="650,80" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/listPerson.do,success,/page/yndemo/listPerson.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,213" />
+      <AbsolutePoint location="151,213" />
+      <AbsolutePoint location="151,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/census/savePerson.do,success,/page/yndemo/listPerson.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1075,234" />
+      <AbsolutePoint location="1075,286" />
+      <AbsolutePoint location="852,286" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/editPerson.do,success,/page/yndemo/editPerson.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="451,250" />
+      <AbsolutePoint location="451,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=",null,/census/editPerson.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,80" />
+      <AbsolutePoint location="804,80" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/census/editPerson.do,success,/page/yndemo/editPerson.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="727,110" />
+      <AbsolutePoint location="727,174" />
+      <AbsolutePoint location="552,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchMajor.do,success,/page/yndemo/editPerson.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1212,392" />
+      <AbsolutePoint location="1287,392" />
+      <AbsolutePoint location="1287,-25" />
+      <AbsolutePoint location="459,-25" />
+      <AbsolutePoint location="459,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

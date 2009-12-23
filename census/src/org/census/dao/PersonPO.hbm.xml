@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="org.census.dao.PersonPO" table="person">
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="increment"></generator>
+        </id>
+        <property name="majorId" type="integer">
+            <column name="majorId" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" />
+        </property>
+        <property name="identity" type="string">
+            <column name="identity" length="50" />
+        </property>
+        <property name="isMajor" type="integer">
+            <column name="isMajor" not-null="true" />
+        </property>
+        <property name="majorRelation" type="integer">
+            <column name="majorRelation" />
+        </property>
+        <property name="job" type="string">
+            <column name="job" />
+        </property>
+        <property name="houseCode" type="integer">
+            <column name="houseCode" />
+        </property>
+        <property name="group" type="integer">
+            <column name="userGroup" />
+        </property>
+        <property name="village" type="integer">
+            <column name="village" />
+        </property>
+    </class>
+</hibernate-mapping>
