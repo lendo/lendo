@@ -1,0 +1,78 @@
+BODY {
+	BACKGROUND: #C0EBD8;
+	FONT: 9pt 宋体;
+	MARGIN: 0px;
+	SCROLLBAR-FACE-COLOR: #0d93d9;
+	SCROLLBAR-HIGHLIGHT-COLOR: #EDF4FD;
+	SCROLLBAR-SHADOW-COLOR: #EDF4FD;
+	SCROLLBAR-3DLIGHT-COLOR: #0d93d9;
+	SCROLLBAR-ARROW-COLOR: #EDF4FD;
+	SCROLLBAR-TRACK-COLOR: #EDF4FD;
+	SCROLLBAR-DARKSHADOW-COLOR: #0d93d9;
+}
+
+TABLE {
+	BORDER-BOTTOM: 0px;
+	BORDER-LEFT: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px
+}
+
+TD {
+	FONT: 12px 宋体
+}
+
+IMG {
+	BORDER-BOTTOM: 0px;
+	BORDER-LEFT: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	VERTICAL-ALIGN: bottom;
+}
+
+A {
+	COLOR: #000000;
+	FONT: 12px 宋体;
+	TEXT-DECORATION: none;
+}
+
+A:hover {
+	COLOR: #428eff;
+	TEXT-DECORATION: underline;
+}
+
+.sec_menu {
+	BACKGROUND: #C0EBD8;
+	BORDER-BOTTOM: white 1px solid;
+	BORDER-LEFT: white 1px solid;
+	BORDER-RIGHT: white 1px solid;
+	OVERFLOW: hidden;
+}
+
+.menu_title {
+	
+}
+
+.menu_title SPAN {
+	COLOR: #465F45;
+	LEFT: 9px;
+	POSITION: relative;
+	TOP: 2px;
+	cursor: hand
+}
+
+.menu_title2 {
+	
+}
+
+.menu_title2 SPAN {
+	COLOR: #465F45;
+	LEFT: 8px;
+	POSITION: relative;
+	TOP: 2px;
+	cursor: hand;
+}
+
+.ff {
+	color: 064ca4
+}

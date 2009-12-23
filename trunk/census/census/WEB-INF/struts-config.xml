@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+	    <form-bean name="personFormBean" type="org.census.action.PersonFormBean" />
+	</form-beans>
+	
+	<action-mappings>
+		<action path="/menu" type="org.census.action.MenuBuilderAction">
+			<forward name="success" path="/menu.jsp" />
+		</action>
+		<action path="/listPerson" type="org.census.action.PersonListAction" name="personFormBean" scope="request">
+		    <forward name="success" path="/page/yndemo/listPerson.jsp" />
+		</action>
+		<action path="/editPerson" type="org.census.action.PersonEditAction" name="personFormBean" scope="request">
+		    <forward name="success" path="/page/yndemo/editPerson.jsp" />
+		</action>
+		<action path="/savePerson" input="/page/yndemo/editPerson.jsp" type="org.census.action.PersonSaveAction" name="personFormBean" scope="request">
+		    <forward name="success" path="/listPerson.do" redirect="true" />
+		</action>
+		<action path="/deletePerson" type="org.census.action.PersonDeleteAction" name="personFormBean" scope="request">
+		    <forward name="success" path="/listPerson.do" redirect="true" />
+		</action>
+		<action path="/searchMajor" type="org.census.action.MajorSearchAction" name="personFormBean" scope="request">
+		    <forward name="success" path="/page/yndemo/searchMajor.jsp"/>
+		</action>
+	</action-mappings>
+	<message-resources parameter="org.census.ApplicationResources" />
+</struts-config>
+

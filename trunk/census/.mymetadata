@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="census"
+  id="myeclipse.1261118641531"
+  context-root="/census"
+  j2ee-spec="1.4"
+  archive="census.war">
+  <attributes>
+    <attribute name="webrootdir" value="census" />
+  </attributes>
+</project-module>
+
