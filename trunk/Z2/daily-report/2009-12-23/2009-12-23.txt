@@ -1,0 +1,21 @@
+1.Transaction Fee算出来的最后的值需要格式化为2位的浮点型。
+2.创建Security Model。
+3.修改Bug-。
+     修改的报表：
+     Donation List:reportId=18
+     Event Registration List:reportId=51
+     Attendee List:reportId=52
+     Event Session Registration List:reportId=54
+     Event Session Attendee List:reportId=55
+     Transaction Report:reportId=160
+     Declined Transaction Report:reportId=161
+     Current Membership Report:reportId=170
+     Membership Due:reportId=171
+     Membership Over Due:reportId=172
+     Membership Auto-Renewal Cancellation Report:reportId=173
+     Membership Auto Renewal Report:reportId=174
+     Expired Membership Report:reportId=175
+     Members Report:reportId=233
+----------------------------------------Scheduled Tasks----------------------------------------
+1.给爸爸完善户籍管理系统。
+2.给刘俊杰做JMS的问题做Topic的测试代码，做数据导入的进度测试。
