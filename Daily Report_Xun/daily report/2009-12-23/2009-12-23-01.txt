@@ -1,0 +1,47 @@
+1.ORDER BY 语句用于对结果集进行排序。
+  ORDER BY 语句默认按照升序对记录进行排序。
+  如果希望对记录进行降序排列，可以使用关键字 DESC 。
+  如果一列是字母组合，则以首字母顺序排列。
+  例如：
+     SELECT Company FROM Orders ORDER BY Company
+     SELECT Company FROM Orders ORDER BY Company DESC
+     SELECT Company,OrderNumber FROM Orders ORDER BY Company ASC,OrderNumber DESC
+     
+2.INSERT INTO 语句用于向表格中插入新的行。
+  语法：
+  INSERT INTO 表名称 VALUES (值1，值2，...)
+  也可以指定插入的列：
+  INSERT INTO 表名称 （列1，列2，...） VALUES (值1，值2，...)
+  例如：
+  INSERT INTO Persons VALUES ('Gates','Bill','Xuanwumen11','Beijing')
+  INSERT INTO Persons ('LastName','Address') VALUES ('William','Chengdu')
+  
+3.SQL语言是一种声明式计算机语言
+  不像C、Cobol、Java、汇编语言、Fortran、Visual Basic等
+  过程式的计算机语言。
+  SQL语言针对的是计算结果，
+  过程式的计算机语言针对的是描述结果的过程。 
+  
+
+---------------------------------------------------- Schedule ------------------------------------------------   
+1.（Q1）丹哥，我对于下面这种形式的类还不是很理解，
+        比如：Comparable<Employee>,Comparable<Manager>,
+        它为什么要用这种形式表现类呢？有什么区别吗？
+        这种形式来表现类一般用在什么地方呢？是用来说明吗？
+        还是在写代码的时候有这种必要？我不是很清楚。
+        我记得在第5章讲到了这点，希望丹哥说说，我再反回去
+        理解一下。
+        
+2.（Q1）丹哥，内部类我还了解得不多，对于第3点，“引用实例化
+        该内部对象的外围类对象”。这句话是不是就是指，如果实
+        例化了一个内部类对象，这个对象就具有外围类对象的状态？
+        同时被实例化了外围类的实例域？
+        
+3.(Q1)丹哥，目前我看了大半的内部类介绍，这里的问题还比较多，
+       可以说是看得似懂非懂的。本来这部分我想已经比以前更加
+       抽象，更加难于理解。我想可能这部分的内容应该再直观点
+       来理解比较好，可能要清楚些。对于这部分后面的内容，我
+       感到些吃力了。所以想问问，这部分我该怎么来学习比较好
+       呢？它们之间的联系点在哪里呢？这部分内容的学习针对的
+       对象、目标是什么呢？用在哪些地方呢？有点迷茫了。
+        
