@@ -5,7 +5,7 @@
 3。When we create an email audience, do we keep the logic to auto-filter out those accounts that are marked "deceased"?
    Fixed:在search.xml里面加入一个默认的条件选项。
 4。Transaction Fees，今天让Lily开始测试，注意关注BUG。
-5。今天完成Membership Package的PO,VO,Translator，可以开始写页面了。
+5。今天完成Membership Package的PO,VO,Translator，可以开始写页面了，想想这个Translator是否能够重构一下。
 
 schedule:
 
