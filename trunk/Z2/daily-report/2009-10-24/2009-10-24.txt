@@ -30,6 +30,8 @@ a, 要跟着一本教材走，去书城买几本成系统的教材来学。同�
 
 b, 学英语要多看英语电影，有上下文，更容易记单词。
 
+c, 帮张总给了50元清洁费。
+
 1, Could you please take a look at this against your local ms database? Let me know how it goes and why the other event doesn’t have the ticket price information listed.
    （这个问题在测试的时候，需要连接到本地的ms数据库才能进行测试）
 2, I’m not seeing Additional Contact as an available result column anywhere either
