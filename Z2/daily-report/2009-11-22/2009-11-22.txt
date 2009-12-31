@@ -1,6 +1,6 @@
 1。Hi Dan, I am having trouble connecting to our email server this afternoon from the office, so I just enter a message via MSN
-can you please take a look at the code your checked in prior to Transaction Fee project? Is action/ecommerce/ShoppingCartAction.java the only java file I need to roll back to the previous version? I did that and the code can be complied without any problem.
-I'll check with you tomorrow. Just wanted to write it down today
+   can you please take a look at the code your checked in prior to Transaction Fee project? Is action/ecommerce/ShoppingCartAction.java the only java file I need to roll back to the previous version? I did that and the code can be complied without any problem.
+   I'll check with you tomorrow. Just wanted to write it down today。
 
 
 1。Transaction Fees，今天让Lily开始测试，注意关注BUG。
