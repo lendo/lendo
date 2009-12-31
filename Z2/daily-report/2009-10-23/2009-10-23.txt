@@ -1,4 +1,3 @@
-
 1.Could you please take a look at this against your local ms database? Let me know how it goes and why the other event doesn’t have the ticket price information listed.
 INSERT INTO `report_output_lookup` VALUES ('475', '236', 'event_ticket_package', 'concat_ws(\'<hr/>\',event_ticket_package.name,group_concat(etp.name separator \'<hr/>\'))', '1', null, 'Ticket Name', 'ticketName', 'Ticket Name', '1', null, null, null, '3', '0', null, '10', '0');
 INSERT INTO `report_output_lookup` VALUES ('474', '236', 'event_ticket_package', 'concat_ws(\'<hr/>\',cast(event_ticket_package.fee as char),group_concat(cast(etp.fee as char) separator \'<hr/>\'))', '1', null, 'Ticket Price', 'ticketPrice', 'Ticket Price', '1', null, null, '#,###,###.00', '3', '0', null, '10', '0');
