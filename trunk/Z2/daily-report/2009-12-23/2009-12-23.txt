@@ -1,6 +1,6 @@
 1.Transaction Fee算出来的最后的值需要格式化为2位的浮点型。
 2.创建Security Model。
-3.修改Bug-。
+3.修改Bug-375。
      修改的报表：
      Donation List:reportId=18
      Event Registration List:reportId=51
