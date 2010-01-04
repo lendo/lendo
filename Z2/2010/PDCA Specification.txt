@@ -1,0 +1,61 @@
+Keyword
+-------------------------------------------------------------------------------------------------------------------------------------
+
+PLAN 
+    Establish the objectives and processes necessary to deliver results in accordance with the expected output. 
+    By making the expected output the focus, 
+    it differs from other techniques in that the completeness and accuracy of the specification is also part of the improvement.
+DO 
+    Implement the new processes. Often on a small scale if possible.
+CHECK 
+    Measure the new processes and compare the results against the expected results to ascertain any differences.
+ACT 
+    Analyze the differences to determine their cause. Each will be part of either one or more of the P-D-C-A steps. 
+    Determine where to apply changes that will include improvement. 
+    When a pass through these four steps does not result in the need to improve, 
+    refine the scope to which PDCA is applied until there is a plan that involves improvement. 
+
+About
+
+-------------------------------------------------------------------------------------------------------------------------------------
+PDCA was made popular by Dr. W. Edwards Deming, who is considered by many to be the father of modern quality control; 
+however it was always referred to by him as the "Shewhart cycle." Later in Deming's career, he modified PDCA to "Plan, 
+Do, Study, Act" (PDSA) so as to better describe his recommendations.
+
+The concept of PDCA is based on the scientific method, as developed from the work of Francis Bacon (Novum Organum, 1620). 
+The scientific method can be written as "hypothesis" - "experiment" - "evaluation" or plan, do, and check. 
+Shewhart described manufacture under "control" - under statistical control - as a three step process of specification, production, and inspection.
+He also specifically related this to the scientific method of hypothesis, experiment, and evaluation. 
+Shewhart says that the statistician "must help to change the demand [for goods] by showing...
+how to close up the tolerance range and to improve the quality of goods." 
+Clearly, Shewhart intended the analyst to take action based on the conclusions of the evaluation. 
+According to Deming[3] during his lectures in Japan in the early 1950's the Japanese participants shortened the steps to the now traditional plan, do, check, act. 
+Deming preferred plan, do, study, act because "study" has connotations in English closer to Shewhart's intent than "check."
+
+A fundamental principle of the scientific method and PDSA is iteration - once a hypothesis is confirmed (or negated), executing the cycle again will extend the knowledge further. 
+Repeating the PDSA cycle can bring us closer to the goal, usually a perfect operation and output.
+
+In Six Sigma programs, the PDSA cycle is called "define, measure, analyze, improve, control" (DMAIC). 
+The iterative nature of the cycle must be explicitly added to the DMAIC procedure.
+
+PDSA should be repeatedly implemented in spirals of increasing knowledge of the system that converge on the ultimate goal, each cycle closer than the previous. 
+One can envision an open coil spring, with each loop being one cycle of the Scientific Method - PDSA, 
+and each complete cycle indicating an increase in our knowledge of the system under study. 
+This approach is based on the belief that our knowledge and skills are limited, but improving. 
+Especially at the start of a project, key information may not be known; 
+the PDSA - scientific method - provides feedback to justify our guesses (hypotheses) and increase our knowledge. 
+Rather than enter "analysis paralysis" to get it perfect the first time, it is better to be approximately right than exactly wrong. 
+With the improved knowledge, we may choose to refine or alter the goal (ideal state). Certainly, the PDSA approach can bring us closer to whatever goal we choose.
+
+Rate of change, that is, rate of improvement, is a key competitive factor in today's world. 
+PDSA allows for major 'jumps' in performance ('breakthroughs' often desired in a Western approach), 
+as well as Kaizen (frequent small improvements associated with an Eastern approach). 
+In the United States a PDSA approach is usually associated with a sizable project involving numerous people's time, 
+and thus managers want to see large 'breakthrough' improvements to justify the effort expended. However, 
+the Scientific Method and PDSA apply to all sorts of projects and improvement activities.
+
+The power of Deming's concept lies in its apparent simplicity. The concept of feedback in the Scientific Method, in the abstract sense, 
+is today firmly rooted in education. While apparently easy to understand, 
+it is often difficult to accomplish on an on-going basis due to the intellectual difficulty of judging one's proposals (hypotheses) on the basis of measured results. 
+Many people have an emotional fear of being shown "wrong," even by objective measurements. 
+To avoid such comparisons, we may instead cite complacency, distractions, loss of focus, lack of commitment, re-assigned priorities, lack of resources, etc.
