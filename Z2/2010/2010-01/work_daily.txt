@@ -1,3 +1,0 @@
-1.The new password for admin in remote server is:testing987
-
-2.Create new folder named "2010-01" under the folder "Develop Database".
