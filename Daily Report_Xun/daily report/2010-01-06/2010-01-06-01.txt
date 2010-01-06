@@ -1,0 +1,25 @@
+1.TOP 子句用于规定要返回的记录数目。
+  注释：并非所有的数据库系统都支持 TOP 子句。
+  SQL语法：
+  SELECT TOP number (percent column_name)
+  FROM table_name
+  比如：
+  SELECT TOP 50 percent * FROM Persons
+  返回50%的记录数目。
+  或者：
+  SELECT TOP 2 * FROM Persons
+  返回2个记录数目。
+  
+2.LIKE操作符用于在WHERE子句中搜索列中指定的模式。
+  SQL LIKE操作符语法：
+  SELECT column_name(s) FROM table_name
+  WHERE column_name LIKE pattern
+  例如：
+  SELECT * FROM Persons WHERE City LIKE 'N%'
+  '%'可用于定义通配符（模式中缺少的字母）
+  上面的例子是指定城市列中搜索类似'N'开头字母的所有信息。
+  '%g'则是以'g'结尾的信息。
+  '%lon%'包含'lon'字母的信息。
+  NOT 关键字则是不包含。
+  例如：
+  SELECT * FROM Persons WHERE City NOT LIKE '%lon%'
