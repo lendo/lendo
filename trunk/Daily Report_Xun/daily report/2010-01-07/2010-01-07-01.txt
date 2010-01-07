@@ -1,0 +1,25 @@
+1.在搜索数据库中的数据时，SQL通配符可以替代一个或多个字符。
+  SQL通配符必须与LIKE运算符一起使用。
+  % 替代一个或多个字符。
+  _ 替代一个字符。
+  [charlist] 字符列中的任何单一字符。
+  [^charlist]或[!charlist] 不在字符列中的任何单一字符。
+  比如：
+  SELECT * FROM Persons WHERE City LIKE 'Ne%'
+  SELECT * FROM Persons WHERE City LIKE 'N_wYork'
+  SELECT * FROM Persons WHERE City LIKE '[ALN]%'
+  SELECT * FROM Persons WHERE City LIKE '[!ALN]%'
+  
+2.IN 操作符允许我们在WHERE子句中规定多个值。
+  SQL IN 语法：
+  SELECT column_name(s) FROM table_name
+  WHERE column_name IN value1,value2...
+  比如：
+  SELECT * FROM Persons WHERE LastName IN ('Adams','Carter')
+  
+  
+---------------------------------------------------- Schedule ------------------------------------------------   
+1.(Q1)丹哥，我想问问，在讲SQL语法的时候，
+       有个column_name(s)，后面这个（s）
+       是什么意思？网站上举的例也是简单用
+       *号代替，如果不用*号，我该怎么用？
