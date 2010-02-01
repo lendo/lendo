@@ -3,4 +3,5 @@
 
 1.User Friendliness,Mr.Zhang will collect our ideas by the end of this month and work out an UI “clinic” plan.
 
-2.
+2.Group Membership for Households and Organizations:
+  
