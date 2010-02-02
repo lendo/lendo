@@ -4,4 +4,17 @@
 1.User Friendliness,Mr.Zhang will collect our ideas by the end of this month and work out an UI “clinic” plan.
 
 2.Group Membership for Households and Organizations:
+
+3.Add DOB to output columns? If it takes more than an hour, let’s not worry about it. Please let me know your time estimate first before we do anything.
+
+4.When an account gets deleted in NEON back end. If it's a recently created account and it is listed on mail merge list. Our communication home won't work.
+  Can we clear mail_merge table (remove the matching accountId and constituentId records) when we delete an account?
+
+5.I think Dan already added the Transaction ID, let's also add the Deceased field.
+  #1. Allocate My Contribution is a custom field
+  #2. Donation report related.
   
+6.Can you help us find out why Sheila Bowman (387) is not on auto renewal (membership) any more… 
+  Do you have a log file that can tell us who unchecked (AUTO) on their account? 
+  Denise thinks we have more accounts that are suddenly not on auto anymore
+
