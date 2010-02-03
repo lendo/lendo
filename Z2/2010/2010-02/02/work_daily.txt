@@ -4,6 +4,7 @@
 1.User Friendliness,Mr.Zhang will collect our ideas by the end of this month and work out an UI “clinic” plan.
 
 2.Group Membership for Households and Organizations:
+  a.Table:membership_term, add isGroupMembership,
 
 3.Add DOB to output columns? If it takes more than an hour, let’s not worry about it. Please let me know your time estimate first before we do anything.
 
