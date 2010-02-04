@@ -1,0 +1,5 @@
+1.Currently,Event Attendee Report doesn't have the User Company Name and User Company Title(not attendee) columns.
+  So I need to add both of them to Event Attendee Report,Maybe including Event Session Attendee Report also.
+--------------------------------------------------------------------------
+
+1.User Friendliness,Mr.Zhang will collect our ideas by the end of this month and work out an UI “clinic” plan.
