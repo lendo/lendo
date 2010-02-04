@@ -1,0 +1,30 @@
+1.Added the Transaction ID, let's also add the Deceased field.
+
+2.Check new security release,about Action's permission checking.
+
+3.Modify ReportPreparer.java.
+
+4.Add DOB to output columns.
+
+5.Per our conversation, let's make the necessary change to populate the last donation amount as well as the first donation amount in reports. 
+  Problem:if donation.donationDate is the same,and which donation amount do I need to choose?
+--------------------------------------------------------------------------
+
+1.User Friendliness,Mr.Zhang will collect our ideas by the end of this month and work out an UI “clinic” plan.
+
+2.Group Membership for Households and Organizations:
+  a.Table:membership_term, add isGroupMembership,
+
+4.When an account gets deleted in NEON back end. If it's a recently created account and it is listed on mail merge list. Our communication home won't work.
+  Can we clear mail_merge table (remove the matching accountId and constituentId records) when we delete an account?
+
+5.Arrange the database directories.
+
+6.Can you help us find out why Sheila Bowman (387) is not on auto renewal (membership) any more… 
+  Do you have a log file that can tell us who unchecked (AUTO) on their account? 
+  Denise thinks we have more accounts that are suddenly not on auto anymore
+  
+7.It’s the ms database I gave you yesterday. Can you please verify that and see what the problem is? The find duplicate button can be found from the account detail page.
+
+
+
