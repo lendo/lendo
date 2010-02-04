@@ -1,4 +1,6 @@
 1.A user should have "VIEW_X" access point if he have a permission to "NEW_X","EDIT_X" or "DELETE_X".
+
+2.Exclude all of the "saveOrUpdate" method.
 --------------------------------------------------------------------------
 
 1.User Friendliness,Mr.Zhang will collect our ideas by the end of this month and work out an UI “clinic” plan.
