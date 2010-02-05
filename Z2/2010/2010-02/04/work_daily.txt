@@ -28,5 +28,5 @@
   
 7.It’s the ms database I gave you yesterday. Can you please verify that and see what the problem is? The find duplicate button can be found from the account detail page.
 
-8.笔记本 address
+8.笔记本 上面的问题需要整理。
 
