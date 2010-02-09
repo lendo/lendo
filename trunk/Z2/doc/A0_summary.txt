@@ -8,8 +8,6 @@
   user表里面的primaryContact也为1，但是区别在于，当创建一个contact的时候，individual情况下，user表的primaryContact=0，而在company的情况下，user表的primaryContact=null，他的控制是放到Company_contact表中进行设置。通过contactId关联到user表对应的记录。
   Individual的new contact是存在user表中。
 
-4.当创建Individual User的时候，不会在Company_contact里面生成记录，只有在创建Company的时候，才会在Company_contact自动生成一条记录。Company的new contact是存在company_contact表中。
-
 5.relation分两类，一类是account relation，一类是organization relation，
   account relation是指本人余其他人或者其他公司的关系,这个关系中注意不要和下面的organization relation混淆，
   organization relation是指本人是否是公司的职员，虽然名字上面有relation，但他实际上不是relation。
