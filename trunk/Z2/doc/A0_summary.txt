@@ -2,7 +2,7 @@
   company是从系统搜索出来的，那么company_contact中的companyId不为空，如果是手动输入的，而不是系统选择的，那么companyId就是null。
 
 2.创建一个Company User，那么会在account表创建一条记录，在user表创建 一条记录，保存部分company的信息，再在company表里面创建一条与user表的主键相同的记录，用于保存在user表里面无法
-  存储的一些company的特殊信息。同时在company_contact里面创建一条记录，该记录的primaryContact=1
+  存储的一些company的特殊信息。如果新建了contact会在company_contact里面创建一条记录，该记录的primaryContact=1
 
 3.user表里面的primaryContact控制的是Individual User，当创建一个Individual的时候，一个帐户下可能会有多个contact user，那么用primaryContact=1来表示主联系人。当创建Company的时候，
   user表里面的primaryContact也为1，但是区别在于，当创建一个contact的时候，individual情况下，user表的primaryContact=0，而在company的情况下，user表的primaryContact=null，他的控制是放到Company_contact表中进行设置。通过contactId关联到user表对应的记录。
@@ -18,3 +18,6 @@
      需要在一般用户登录以后的下拉选项中加入一个链接，到一个重新subscribe的页面，目前已有这样一个页面，叫subscribe.jsp，那里面包括邮件列表和
      用户的Email地址，这个页面是在用户不登录的情况下，现在用户已经在本系统有帐户，那么需要去掉前面两个字段。邮件列表就是email audience列表
      不过前台能够看到的email audience列表是在new Audience的时候，distributioin为yes的邮件列表。
+     
+7.创建了一个Individual User以后，如果加入多个contact，多个contact可以有多个company_contact记录。但是如果你想给
+     一个contact加入公司的信息，那么你必须先把这个contact变成primaryContact，然后编辑account的信息的时候，给这个contact加入公司信息。
