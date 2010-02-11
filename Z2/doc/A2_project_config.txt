@@ -6,3 +6,7 @@
 2.今天解决了一个纠结我一天，纠结张总两天的问题，就是不管如何改代码，这JBoss里面的代码始终不更新，郁闷得很，
   原来是因为为了运行schedule，把这个np-ejb.jar拷贝到了standard/lib目录下，所以，首先是加载里面的类。
   所以始终不更新，以后得小心啊，免得浪费时间。
+  
+3.在ReportPreparer里面，在一个retrieveSql里面不能有两个where条件，在我们的union语法中就可能出现两个where，
+  一般情况下，如果一定要用两个where，就必须把查询条件放到standardSearch里面去，然后把retrieveSql设为false,false,false。
+  非常重要。
