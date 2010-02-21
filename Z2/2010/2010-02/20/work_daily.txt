@@ -1,4 +1,8 @@
 1.The Attendee reports are pulling up an Internal System Error if there are Attendee Custom fields involved.
+  It's caused by code confusion between Liu and me(attendee_custom_view -> event_attendee_custom_view).
+  Restore two files: ReportPreparer.java and ReportViewAction.java.
+  
+
 -------------------------------------------------------------------------------------------------------------
 
 1.User Friendliness,Mr.Zhang will collect our ideas by the end of this month and work out an UI “clinic” plan.
@@ -21,5 +25,8 @@
 7.It’s the ms database I gave you yesterday. Can you please verify that and see what the problem is? 
   The find duplicate button can be found from the account detail page.
 
-8.笔记本 上面的问题需要整理。
+8.Arrange mails in my notebook.
+
+9.Here are the desired features Active is looking for. 
+  It doesn’t mean we’ll need to implement them all...(check the email for more details).
 
