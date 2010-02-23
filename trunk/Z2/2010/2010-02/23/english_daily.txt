@@ -1,0 +1,25 @@
+Hi,Lei.
+
+Hi Lei,
+
+
+We just added tender fields to donation and event reports last time.
+
+We already added tender field to the donation and event report.
+
+ 
+You need to update files below:
+
+You’ll need to update files below:
+
+ 
+ReportPreparer.java(remove "event_")
+
+Develop Database/2010-02/blank-baseline-update-100223(Only for default-0).sql
+
+
+The improvement has been recorded in jira,and has been closed by Lily right now.
+
+The improvement has been recorded in jira. It has already been closed by Lily. (right now should not go together with “has been”)
+
+ 
