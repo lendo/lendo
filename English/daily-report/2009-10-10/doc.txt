@@ -1,7 +1,0 @@
-1.Instruction和Instructions的区别：
-  Instruction一般是用在口头或邮件，比如：here are the instruction。
-  Instructions是用在具体的标准文档中，是一种固定格式，在这个Instructions下面就应该是第一，第二，第三。。。。
-
-2.live在做形容词是读：/laiv/，在做动词的时候读：/liv/。例如：
-  I had lived here for a long time。/liv/
-  the football game is going out live。/laiv/
