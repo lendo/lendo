@@ -1,3 +1,0 @@
-alphabet,alphabetical,alphabetically
-instruction,instructions
-symposium
