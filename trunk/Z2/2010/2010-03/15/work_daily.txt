@@ -1,0 +1,19 @@
+
+-------------------------------------------------------------------------------------------------------------
+
+1.User Friendliness,Mr.Zhang will collect our ideas by the end of this month and work out an UI “clinic” plan.
+
+
+2.在save一个account的时候，如果选择了opt-out,那么要把对应的email放到email_hold_list这个表里面去。目前没有做这一步工作。
+
+3.When an account gets deleted in NEON back end. If it's a recently created account and it is listed on mail merge list. 
+  Our communication home won't work.Can we clear mail_merge table (remove the matching accountId and constituentId records) 
+  when we delete an account?
+  
+4.Data Appending- Ability to “append” information to your NEON records 
+  This will be used for appending NEON “attributes”. 
+  The ability to pull out a list of people from NEON (with the NEON ID), 
+  add a custom field (attribute), and import it back into the database (with the NEON ID). 
+      要给客户一个操作流程，画一个流程图，看客户需要的是否是这个东西。必须留大概10天来做这个事情。
+
+
