@@ -14,32 +14,12 @@ public class StreamTest {
 	    InputStream stream = new FileInputStream(file);
 	    byte[] content = new byte[1];
 	    StringBuffer s = new StringBuffer();
-//	    while(stream.read(content)!=-1){
-//	    	s.append(new String(content));
-//	    }
+	    while(stream.read(content)!=-1){
+	    	s.append(new String(content));
+	    }
 	    
-	    
-	    String x = new StreamTest().simpleRead(stream);
-	    System.out.println(x);
+	    System.out.println(s.toString());
 	    
 	    stream.close();
 	}
-	
-	public String simpleRead(InputStream stream) throws Exception {
-		String text = null;
-		
-		if(stream!=null){
-			int[] code = new int[1000];
-			int eachCode = 0;
-			int i = 0;
-			while((eachCode = stream.read())!=-1){
-				code[0] = eachCode;
-				i++;
-			}
-			text = new String(code,0,code.length);
-		}
-		
-		return text;
-	}
-
 }
