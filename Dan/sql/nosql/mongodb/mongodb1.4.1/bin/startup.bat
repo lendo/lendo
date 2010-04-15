@@ -1,0 +1,1 @@
+mongod --dbpath E:/workspace/Dan/sql/nosql/mongodb/mongodb1.4.1/data
