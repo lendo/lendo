@@ -1,2 +1,0 @@
-1.在m_event表里面用category字段来表示event还是ticket，1为event，2为ticket。
-2.目前我们把m_event都当作ticket在用，没有event概念，只有ticket概念。也就是我们的category都应该是2。
