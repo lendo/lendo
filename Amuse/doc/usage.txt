@@ -1,8 +1,0 @@
-Calendar的使用方法。
-1.给需要日历的textfiled加上一个id
-2.在/js/fc-amuse.js中加上对应的id
-比如id=“textfiled1”
-$("#textfiled1").datepicker();就可以了，多个id以逗号隔开
-
-注意，该方法不支持"a.b"这种id命名方式。
-----------------------------------------------------------
