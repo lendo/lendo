@@ -1,0 +1,16 @@
+目前如果在r_user表里面存在有两个相同的用户名，那么程序是会出错的，错误见：
+com.cm12530.rms.organ.dao.impl.UserDaoImpl.java第27行，
+public User selectByPrimaryKey(String loginname) throws SQLException。
+建议用loginName和passwd匹配查询，如:
+select * from r_user where loginName='xxx' and passwd='xxx';
+
+com.cm12530.rms.login.session.LoginSessionListener.java里面的
+MySessionContext.java这个类是一个单例模式的实现，但是这里很容易有
+double check的问题。参见IBM教程。
+http://www.research.ibm.com/designpatterns/pubs/ph-jun96.txt
+http://www.ibm.com/developerworks/java/library/j-dcl.html
+
+在权限管理的应用管理里面加入一个新的应用，则会在r_application表里面加入一条记录。
+一个应用系统的模块管理是指为这个系统创建许多可用的模块，这些模块创建
+了以后还并不会显示，创建完成的模块在模块组管理里面可以被分配。只有进入模块组
+管理，对一个topmenu进行了模块的分配以后，对应的模块才会被显示出来。

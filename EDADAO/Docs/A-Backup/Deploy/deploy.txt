@@ -1,0 +1,17 @@
+1，最好每个工程有一套build脚本，开发服务器，测试服务器，和生产服务器的数据结构及时同步，SVN上面的代码没有用的就删除掉，尽量保证
+      在SVN上面的代码简洁清楚，同时有清楚的说明文档，每个类由专门的负责人来建立，符合之前文档的命名规则。命名的负责人要保证类名通俗易懂，
+      有专门的文档来描述类。
+      
+2，Resin在eclipse里面的debug.
+      在resin 3.0（包括3.0）以前只需要做一个批处理文件，文件内容：
+   httpd.exe -Xdebug -Xrunjdwp:transport=dt_socket,address=5005,server=y,suspend=n
+  
+      在resin3.1以后，不能再这样使用，而是要到resin.conf里面配置启动参数，参数如下：
+   <jvm-arg>-Xdebug</jvm-arg>
+   <jvm-arg>-Xnoagent</jvm-arg>
+   <jvm-arg>-Djava.compiler=NONE</jvm-arg>
+   <jvm-arg>-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8787</jvm-arg>
+   
+3，CDN:Content Delivery Network，即内容分发网络。http://baike.baidu.com/view/21895.htm
+   NGINX:nginx.net/
+   F5:Load Balance。

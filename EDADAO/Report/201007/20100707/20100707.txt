@@ -1,0 +1,6 @@
+1.发现新问题，在migu播放器里面成功上传了播放列表和收藏列表，再点右键下载，提示找不到历史记录。
+     这个问题是偶尔出现，在我的电脑上面工作正常，但是在移动的（）那里测试出现上述错误。错误提示见
+     本文件夹的：pic_download_playlist_error_header.jpg和pic_download_playlist_error_content.jpg。
+ 
+2.明天找刘小洋记录的大家提出的问题。
+     

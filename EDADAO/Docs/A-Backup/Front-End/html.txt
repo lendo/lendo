@@ -1,0 +1,11 @@
+1.如下这段内容可以在加载sina.com之前显示Loading...这个动作，这个Loading页面可以做成动态的。
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <META HTTP-EQUIV="Refresh" CONTENT="0;URL=http://www.sina.com.cn">
+</head>
+
+<body>
+<p>Loading ...</p>
+</body>
+</html>

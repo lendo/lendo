@@ -1,0 +1,47 @@
+http://218.200.227.218:8080/rms    admin   admin123
+
+http://218.200.227.218:8888/testpage/HomePage/index.html miniportal本地测试路径
+
+
+以下是VPN及218测试服务器的帐号密码，在上线前的测试目前是部署到218进行的，218为外网测试服务器。
+目录
+/home/resin_pc1/…         前台工程，端口8888 http://218.200.227.218:8888/default/HomePage/index.html
+/home/resin2/…                后台发布系统，端口9080 http://218.200.227.218:8080/rms/  帐号admin，密码admin123
+ 
+VPN
+https://218.200.235.246
+帐号liuxiaoyang
+密码cdA105
+ 
+218服务器
+ 
+公网IP
+218.200.227.218
+内网（ssh需要用内网）
+10.25.120.70
+ 
+ 
+ssh帐号
+ 
+                   root yidongyinyuejidi-!@#220cpkf_2010
+数据库
+         root/cdA105
+ 
+ftp
+    端口21
+    服务器路径：/root/data/cmsftp/
+    账号：cmsftp 密码：dadaocms_A103
+             cmsftp3   cdA105_cms
+root权限 cmsadmin cdA105_cms
+
+
+
+
+
+218.200.227.219 10.25.120.66 
+ 
+218.200.227.98 10.25.120.67 PC客户端MIGU操作日志
+218.200.229.215 10.25.120.169 分站和MINIPORTAL DB
+218.200.227.222 10.25.120.69 分站和MINIPORTAL WEB 环境，还包括98使用的数据库。
+218.200.227.218 10.25.120.70 测试环境，和生产环境是一致的。
+218.200.227.221 10.25.120.71

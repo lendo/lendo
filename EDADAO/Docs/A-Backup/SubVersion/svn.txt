@@ -1,0 +1,17 @@
+1，建议每向生产环境发布一次做一个branch,确保生产环境代码和开发环境代码一致，
+      如SVN Home/truck/code/member/src/strut.xml文件第76行，mehtod="getMonthSubScribeNoCode"，
+      这个method是写错了的属性，代码check下来启动不了，这是一个很小的问题，但如果是不容易查找的错误，那代码的调试有些麻烦。
+      
+2，SVN账户信息 地址:https://192.168.106.201/svn/PCCMS/  dudan  111111
+
+3，如果从svn上取了新代码的同学一定要将res/WebRoot/WEB-INF/spring/res_Interface/applicationContext_interface.xml
+      里面最下面有两个定时器注释掉。
+      
+4，SVN资源:
+   member:MiniPortal对应会员Tab
+   publish_front:
+   res_resource_front:
+   
+   
+   https://192.168.106.201/svn/PCCMS/trunk/code/fzweb/ha 这是河南分站的前台代码
+   https://192.168.106.201/svn/PCCMS/trunk/code/fzclub   这是河南分站的俱乐部的代码，下面没有子目录，建议统一目录结构。

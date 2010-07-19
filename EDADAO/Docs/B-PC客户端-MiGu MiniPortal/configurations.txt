@@ -1,0 +1,32 @@
+1,MiniPortal个人空间Servlet类：
+    个人空间的咪咕播放器Tab包括播放列表和收藏列表，这两个列表对应的Servlet为：
+    播放列表：com.cm12530.member.action.pc.GetPCPlayListServlet.java
+    收藏列表：com.cm12530.member.action.pc.GetPCFavoriteListServlet.java
+    
+    个人空间的12530网站Tab包括播放列表和专辑列表，这两个列表对应的Servlet为：
+    播放列表：com.cm12530.member.myspace.action.GetPCFavoriteServlet.java
+    专辑列表：com.cm12530.member.myspace.action.GetPlayGroupServlet.java
+    
+2,咪咕音乐CS端和miniportal的交互在如下这个配置文件中：
+  C:\Documents and Settings\Dan\Application Data\MiguMusic\config\config.xml
+
+3，修改12530网站的播放列表不显示的问题：
+      有三个可能：
+      第一，12530.com总站网站存数据的时候from字段应该为0，也许错误的存储为其他值。
+      第二，根据接口文档，name字段必需传值，目前我们的代码中没有传递该参数。 
+      第三，咪咕音乐miniportal，http://interface-club.12530.com/member/getpcfavorite.html?from=0这个链接
+                  对应的Servlet要从12530网站获取当前登录用户的播放列表，对应的Servlet为：
+        com.cm12530.member.myspace.action.GetPCFavoriteServlet第46行，在拼这个Servlet的请求字符串的时候用的
+                  地址为常量表定义的：InterfaceURL.PCCLIENTFAVORITE，值为：http://218.205.239.21:8080/miniportal1222/f/favorite/list/
+                  但是我看到这个变量的注释为：pc客户端收藏列表，这里可能有一定的问题。是否应该为：InterfaceURL.GETSONGLIST。
+                  
+4，建议：
+      第一，类在取名的时候要很容易区分PC和12530网站，比如以前的miniportal里面对应的几个Servlet的取名容易混淆，
+                  如PC端取列表用"GetPCXXX.java"，网站那边用"Get12530XXX.java"。
+      第二，Miniportal请求远端服务器的各种URL最好放入一个xml或者property配置文件，目前是放在com.cm12530.base.InterfaceURL.java中。
+      第三，建议在migu播放器第一次打开，加载miniportal页面的时候，指向的页面URL是可以在一个文件中配置的，因为在调试的时候发现，即使把C:\Documents and Settings\Dan\Application Data\MiguMusic\config\config.xml
+                  对应的URL映射到本机，migu播放器的miniportal界面仍然导向固定的URL，比如：
+                  将config.xml文件里面的配置由"http://interface-club.12530.com"改为"http://interface-club.12530.com:8888"，
+                  在hosts里面加入映射，重新打开migu播放器，miniportal页面仍然指向：http://interface-club.12530.com/miniportal/xxx
+                  期待能够改一个配置文件，指向：http://interface-club.12530.com:8888/miniportal/xxx，不知道目前是否有这个功能。
+

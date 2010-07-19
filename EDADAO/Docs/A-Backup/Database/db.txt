@@ -1,0 +1,11 @@
+1，今天遇到一个怪问题，数据库导出文件是用sqlyog导出的，然后用navicat导入，始终是乱码。
+      然后发现，原来客户端工具也会导致异常的数据库乱码，以后要小心，开发的时候大家最好用同样的客户端工具。
+      
+2，192.168.106.200 root/空密码
+
+3，如果在导入大数据的时候出现table is full的错误，是因为ibdata1数据已经满了。
+   最好将mysql的data目录指定到NTFS格式的盘符中，这样可以最大支持4GB的ibdata数据，具体到mysql网站查询。
+   如果4G都不够用，可以在my.ini文件中加入如下配置：
+   #innodb_data_home_dir = C:\mysql\data/
+   #innodb_data_file_path = ibdata1:10M:autoextend
+   
