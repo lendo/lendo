@@ -44,8 +44,6 @@ schedule:
 
 注意妈的生日（明天）。
 
-晚上帮文叔查价格。
-
 1, Could you please take a look at this against your local ms database? Let me know how it goes and why the other event doesn’t have the ticket price information listed.
    （这个问题在测试的时候，需要连接到本地的ms数据库才能进行测试）
 2, I’m not seeing Additional Contact as an available result column anywhere either
